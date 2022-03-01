@@ -21,5 +21,8 @@
   "homepage": "https://github.com/RedCiudadana/InnovadoresPublicos#readme",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0"
+  },
+  "dependencies": {
+    "moment": "^2.29.1"
   }
 }
