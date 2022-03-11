@@ -40,7 +40,7 @@ permalink: "index.html"
 		<!-- Content
 		============================================= -->
 		<section id="content">
-			<div class="content-wrap">
+			<div class="content-wrap" style="padding-bottom:0">
 
 		<!-- Nosotros
 		============================================= -->
@@ -138,7 +138,7 @@ permalink: "index.html"
 				</div>
 
 
-		<!-- Eventos y Videos
+		<!-- Actividades y Podcasts
 		============================================= -->
 
 				<div class="container my-4">
@@ -226,6 +226,27 @@ permalink: "index.html"
 
 					</div>	
 				</div>
+			</div>
+
+	<!-- Mesas de Trabajo
+	============================================= -->
+
+			<div class="section py-6 my-6" style="background-color: #e8f0f9;margin-bottom:0!important">
+				<div class="container">
+					<div class="row align-items-center col-mb-50">
+						<h2>Mesas de Trabajo</h2>
+					</div>
+				</div>
+				
+				{% if collections.mesas %}
+				{% for mesa in collections.mesas | limit(1)%}
+				<div class="container">
+					<div class="row align-items-center col-mb-50">
+						
+					</div>
+				</div>
+				{% endfor %}
+				{% endif %}
 			</div>
 
 		</section><!-- #content end -->
