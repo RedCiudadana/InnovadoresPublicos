@@ -18,13 +18,11 @@ collections:
       - { name: "title", label: "Título" }
       - { name: "date", label: "Fecha", widget: "datetime" }
       - { name: "descripcion", label: "Descripción" }
-      - { name: "minuta", 
-          label: "Minuta", 
-          widget: "file", 
-          media_library:
-            config:
-              multiple: true 
-              media_folder: "/images/files"
+      - {
+          name: "minuta",
+          label: "Minuta",
+          widget: "file",
+          media_folder: "/images/files",
         }
       - { name: "acuerdos", label: "Acuerdos", widget: "markdown" }
       - { name: "enlace", label: "Documentos Adicionales" }
