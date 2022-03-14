@@ -7,21 +7,31 @@ media_folder: "images/posts" # Media files will be stored in the repo under src/
 public_folder: "/images/posts" # The src attribute for uploaded media will begin with assets/images/posts
 
 collections:
-  - name: "iniciativas" # Used in routes, e.g., /admin/collections/blog
-    label: "Iniciativas" # Used in the UI
-    folder: "src/iniciativas" # The path to the folder where the documents are stored
+  - name: "reuniones" # Used in routes, e.g., /admin/collections/blog
+    label: "Reuniones" # Used in the UI
+    folder: "src/reuniones" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     editor:
       preview: false # Disable the editor preview and use instead 'preview links'
     fields: # The fields for each document, usually in front matter
       - { name: "title", label: "Title" }
-      - { label: "Image", name: "image", widget: "image" }
-      - { name: "description", label: "Description" }
-      - { name: "autor", label: "Autor" }
-      - { name: "correo", label: "Correo" }
-      - { name: "date", label: "Date", widget: "datetime" }
-      - { name: "body", label: "Body", widget: "markdown" }
+      - {
+          name: "highlight",
+          label: "Highlight",
+          widget: "boolean",
+          default: false,
+          hint: "Display posts in home's highlights",
+        }
+  - name: "directorios" # Used in routes, e.g., /admin/collections/blog
+    label: "Directorios" # Used in the UI
+    folder: "src/directorios" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    editor:
+      preview: false # Disable the editor preview and use instead 'preview links'
+    fields: # The fields for each document, usually in front matter
+      - { name: "title", label: "Title" }
       - {
           name: "highlight",
           label: "Highlight",
