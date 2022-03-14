@@ -18,7 +18,7 @@ collections:
       - { name: "title", label: "Título" }
       - { name: "date", label: "Fecha", widget: "datetime" }
       - { name: "descripcion", label: "Descripción" }
-      - { name: "minuta", label: "Minuta" }
+      - { name: "minuta", label: "Minuta", widget: "file" }
       - { name: "acuerdos", label: "Acuerdos", widget: "markdown" }
       - { name: "enlace", label: "Documentos Adicionales" }
       - {
