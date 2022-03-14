@@ -15,7 +15,12 @@ collections:
     editor:
       preview: false # Disable the editor preview and use instead 'preview links'
     fields: # The fields for each document, usually in front matter
-      - { name: "title", label: "Title" }
+      - { name: "title", label: "Título" }
+      - { name: "date", label: "Fecha", widget: "datetime" }
+      - { name: "descripcion", label: "Descripción" }
+      - { name: "minuta", label: "Minuta" }
+      - { name: "acuerdos", label: "Acuerdos", widget: "markdown" }
+      - { name: "enlace", label: "Documentos Adicionales" }
       - {
           name: "highlight",
           label: "Highlight",
@@ -30,8 +35,12 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     editor:
       preview: false # Disable the editor preview and use instead 'preview links'
+    identifier_field: institucionp
     fields: # The fields for each document, usually in front matter
-      - { name: "title", label: "Title" }
+      - { name: "institucionp", label: "Institución Pública" }
+      - { name: "nombresr", label: "Nombre de Representantes" }
+      - { label: "Icono", name: "icono", widget: "image" }
+      - { name: "enlace", label: "Enlace página Web de institución" }
       - {
           name: "highlight",
           label: "Highlight",
@@ -49,7 +58,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { name: "title", label: "Title" }
       - { label: "Image", name: "image", widget: "image" }
-      - { name: "description", label: "Description" }
+      - { name: "descripcion", label: "Descripción" }
       - { name: "autor", label: "Autor" }
       - { name: "correo", label: "Correo" }
       - { name: "date", label: "Date", widget: "datetime" }
@@ -91,7 +100,10 @@ collections:
     editor:
       preview: false # Disable the editor preview and use instead 'preview links'
     fields: # The fields for each document, usually in front matter
-      - { name: "title", label: "Title" }
+      - { name: "title", label: "Título" }
+      - { label: "Icono", name: "icono", widget: "image" }
+      - { name: "subtitle", label: "Subtítulo" }
+      - { name: "descripcion", label: "Descripción" }
       - {
           name: "highlight",
           label: "Highlight",
@@ -108,7 +120,7 @@ collections:
       preview: false # Disable the editor preview and use instead 'preview links'
     fields: # The fields for each document, usually in front matter
       - { name: "title", label: "Title" }
-      - { name: "description", label: "Description" }
+      - { name: "descripcion", label: "Descripción" }
       - { name: "link", label: "Enlace de podcast" }
       - {
           name: "tags",
