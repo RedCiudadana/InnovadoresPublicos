@@ -16,16 +16,19 @@ collections:
       preview: false # Disable the editor preview and use instead 'preview links'
     fields: # The fields for each document, usually in front matter
       - { name: "title", label: "Título" }
-      - { name: "date", label: "Fecha", widget: "datetime" }
+      - { name: "date", label: "Fecha", widget: "datetime", widget: "markdown" }
       - { name: "descripcion", label: "Descripción" }
+      - { name: "acuerdos", label: "Acuerdos", widget: "markdown" }
       - {
           name: "minuta",
           label: "Minuta",
           widget: "file",
           media_folder: "/images/files",
         }
-      - { name: "acuerdos", label: "Acuerdos", widget: "markdown" }
-      - { name: "enlace", label: "Documentos Adicionales" }
+      - { name: "documentosads", 
+          label: "Documentos Adicionales", 
+          widget: "file",
+          media_folder: "/images/files",}
       - {
           name: "highlight",
           label: "Highlight",
@@ -34,7 +37,7 @@ collections:
           hint: "Display posts in home's highlights",
         }
   - name: "directorios" # Used in routes, e.g., /admin/collections/blog
-    label: "Directorios" # Used in the UI
+    label: "Directorio" # Used in the UI
     folder: "src/directorios" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -43,7 +46,9 @@ collections:
     identifier_field: institucionp
     fields: # The fields for each document, usually in front matter
       - { name: "institucionp", label: "Institución Pública" }
-      - { name: "nombresr", label: "Nombre de Representantes" }
+      - { name: "nombresr", label: "Nombre de los Representantes" }
+      - { name: "cargor", label: "Cargo de los Representantes" }
+      - { name: "contactor", label: "Contacto de los Representantes" }
       - { label: "Icono", name: "icono", widget: "image" }
       - { name: "enlace", label: "Enlace página Web de institución" }
       - {
@@ -61,13 +66,13 @@ collections:
     editor:
       preview: false # Disable the editor preview and use instead 'preview links'
     fields: # The fields for each document, usually in front matter
-      - { name: "title", label: "Title" }
+      - { name: "title", label: "Título" }
       - { label: "Image", name: "image", widget: "image" }
-      - { name: "descripcion", label: "Descripción" }
+      - { name: "subtitulo", label: "Subtítulo" }
       - { name: "autor", label: "Autor" }
       - { name: "correo", label: "Correo" }
       - { name: "date", label: "Date", widget: "datetime" }
-      - { name: "body", label: "Body", widget: "markdown" }
+      - { name: "contenido", label: "Contenido", widget: "markdown" }
       - {
           name: "highlight",
           label: "Highlight",
@@ -76,20 +81,21 @@ collections:
           hint: "Display posts in home's highlights",
         }
   - name: "recursos" # Used in routes, e.g., /admin/collections/blog
-    label: "Recrusos" # Used in the UI
+    label: "Recursos" # Used in the UI
     folder: "src/recursos" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     editor:
       preview: false # Disable the editor preview and use instead 'preview links'
     fields: # The fields for each document, usually in front matter
-      - { name: "title", label: "Title" }
+      - { name: "title", label: "Título" }
       - { label: "Image", name: "image", widget: "image" }
-      - { name: "description", label: "Description" }
+      - { name: "description", label: "Descripción" }
       - { name: "autor", label: "Autor" }
       - { name: "correo", label: "Correo" }
-      - { name: "date", label: "Date", widget: "datetime" }
-      - { name: "body", label: "Body", widget: "markdown" }
+      - { name: "date", label: "Fecha", widget: "datetime" }
+      - { name: "body", label: "Contenido", widget: "markdown" }
+      - { name: "enlace", label: "Enlace de Recurso" }
       - {
           name: "highlight",
           label: "Highlight",
@@ -108,7 +114,7 @@ collections:
       - { name: "title", label: "Título" }
       - { label: "Icono", name: "icono", widget: "image" }
       - { name: "subtitle", label: "Subtítulo" }
-      - { name: "descripcion", label: "Descripción" }
+      - { name: "descripcion", label: "Descripción", widget: "markdown" }
       - {
           name: "highlight",
           label: "Highlight",
