@@ -16,8 +16,8 @@ collections:
       preview: false # Disable the editor preview and use instead 'preview links'
     fields: # The fields for each document, usually in front matter
       - { name: "title", label: "Título" }
-      - { name: "date", label: "Fecha", widget: "datetime", widget: "markdown" }
-      - { name: "descripcion", label: "Descripción" }
+      - { name: "date", label: "Fecha", widget: "datetime" }
+      - { name: "descripcion", label: "Descripción", widget: "markdown" }
       - { name: "acuerdos", label: "Acuerdos", widget: "markdown" }
       - {
           name: "minuta",
@@ -25,10 +25,12 @@ collections:
           widget: "file",
           media_folder: "/images/files",
         }
-      - { name: "documentosads", 
-          label: "Documentos Adicionales", 
+      - {
+          name: "documentosads",
+          label: "Documentos Adicionales",
           widget: "file",
-          media_folder: "/images/files",}
+          media_folder: "/images/files",
+        }
       - {
           name: "highlight",
           label: "Highlight",
