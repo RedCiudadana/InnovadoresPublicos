@@ -1,0 +1,5 @@
+{
+    "tags": "reuniones",
+    "permalink": "reuniones/{{ page.fileSlug }}/index.html",
+    "layout": "layouts/reunion.njk"
+}

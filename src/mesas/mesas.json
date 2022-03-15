@@ -1,0 +1,5 @@
+{
+    "tags": "mesas",
+    "permalink": "mesas/{{ page.fileSlug }}/index.html",
+    "layout": "layouts/mesa.njk"
+}

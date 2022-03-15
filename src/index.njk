@@ -6,6 +6,7 @@ permalink: "index.html"
 
 {% block head %}
 <title>Innovadores Publicos | Red Ciudadana</title>
+<link rel="stylesheet" href="/css/main.css" type="text/css" />
 {% endblock %}
 
 {% block content %}
@@ -175,11 +176,11 @@ permalink: "index.html"
 							{% for actividad in collections.actividades | reverse | limit(5) %}
 					
 				
-							<div class="event-bg event-bg-03 pos-rel mb-30" style="margin:1rem 0;">
+							<a href="{{actividad.url}}"><div class="event-bg event-bg-03 pos-rel mb-30" style="margin:1rem 0;background-color:#e8f0f9!important">
 								<div class="row" style=" align-items:center">
 									<div class="col-xl-6 col-lg-6">
 										<div class="event-img mb-20 center">
-											<a href="{{actividad.url}}"><img style="height:100%!important" src="{{actividad.data.image}}" alt=""></a>
+											<img style="height:100%!important" src="{{actividad.data.image}}" alt="">
 										</div>
 									</div>
 									<div class="col-xl-6 col-lg-6">
@@ -194,7 +195,7 @@ permalink: "index.html"
 										</div>
 									</div>
 								</div>
-							</div>
+							</div></a>
 
 							{% endfor %}
 
@@ -236,17 +237,34 @@ permalink: "index.html"
 					<div class="row align-items-center col-mb-50">
 						<h2>Mesas de Trabajo</h2>
 					</div>
-				</div>
 				
-				{% if collections.mesas %}
-				{% for mesa in collections.mesas | limit(1)%}
-				<div class="container">
-					<div class="row align-items-center col-mb-50">
-						
+					<div class="row py-6">
+						{% if collections.mesas %}
+						{% for mesa in collections.mesas | limit(1)%}
+						<a href="{{mesa.url}}"><div class="event-bg event-bg-03 pos-rel mb-30 col-lg-6 col-xl-6" style="margin:1rem 0;background-color:#fff!important">
+							<div class="row" style=" align-items:center">
+								<div class="col-xl-6 col-lg-6">
+									<div class="event-img mb-20 center">
+										<img style="height:100%!important" src="{{mesa.data.icono}}" alt="">
+									</div>
+								</div>
+								<div class="col-xl-6 col-lg-6">
+									<div class="event-wrapper mb-20 " >
+										<div class="event-text">
+											<!--span><i class="far fa-map-marked-alt verdeo"></i> Guatemala - 8 de Septiembre 2021</span-->
+											<h3> {{mesa.data.title}}</h3>
+										</div>
+										<div class="event-meta">
+											<span><!--i class="far fa-user-circle"></i-->{{mesa.data.subtitle}}</span>
+										</div><br>
+									</div>
+								</div>
+							</div>
+						</div></a>
+						{% endfor %}
+						{% endif %}
 					</div>
 				</div>
-				{% endfor %}
-				{% endif %}
 			</div>
 
 		</section><!-- #content end -->

@@ -1,0 +1,5 @@
+{
+    "tags": "directorios",
+    "permalink": "directorios/{{ page.fileSlug }}/index.html",
+    "layout": "layouts/directorio.njk"
+}
