@@ -1,7 +1,7 @@
 ---
-title: Mesa de Gobierno Digital
+title: Grupo de Gobierno Digital
 icono: /images/posts/icono-10.png
-subtitle: Mesa de Gobierno Digital
-descripcion: Descripción de Mesa de Gobierno Digital
+subtitle: Subtitulo de Grupo de Gobierno Digital
+descripcion: Descripción de Grupo de Gobierno Digital
 highlight: false
 ---
