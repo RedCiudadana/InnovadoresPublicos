@@ -34,7 +34,7 @@ permalink: "mesas/index.html"
 
         <!-- Content
 		============================================= -->
-		<section id="content">
+		<section id="content" >
 			<div class="content-wrap" style="padding:0">
 
        
@@ -51,27 +51,32 @@ permalink: "mesas/index.html"
 						<div class="row posts-md col-mb-30 ">
 
                             {% for mesa in collections.mesas%}
-                            <a href="{{mesa.url}}"><div class="event-bg event-bg-03 pos-rel mb-30 col-lg-6 col-xl-6" style="margin:1rem 0;background-color:#e8f0f9!important">
-							<div class="row" style=" align-items:center">
-								<div class="col-xl-6 col-lg-6">
-									<div class="event-img mb-20 center">
-										<img style="height:100%!important" src="{{mesa.data.icono}}" alt="">
-									</div>
-								</div>
-								<div class="col-xl-6 col-lg-6">
-									<div class="event-wrapper mb-20 " >
-										<div class="event-text">
-											<!--span><i class="far fa-map-marked-alt verdeo"></i> Guatemala - 8 de Septiembre 2021</span-->
-											<h3> {{mesa.data.title}}</h3>
+                            <div class=" pos-rel  col-lg-6 col-xl-6" style="margin:1rem 0;">
+								<div class="row  event-bg event-bg-03" style=" align-items:center;background-color:#e8f0f9!important;margin:0 1rem!important;height:100%">
+									<div class="col-xl-6 col-lg-6">
+										<div class="event-img mb-20 center">
+											<img style="height:100%!important" src="{{mesa.data.icono}}" alt="">
 										</div>
-										<div class="event-meta">
-											<span><!--i class="far fa-user-circle"></i-->{{mesa.data.subtitle}}</span>
-										</div><br>
+									</div>
+									<div class="col-xl-6 col-lg-6">
+										<div class="event-wrapper mb-20 " >
+											<div class="event-text">
+												<!--span><i class="far fa-map-marked-alt verdeo"></i> Guatemala - 8 de Septiembre 2021</span-->
+												<h3> {{mesa.data.title}}</h3>
+											</div>
+											<div class="event-meta">
+												<span><!--i class="far fa-user-circle"></i-->{{mesa.data.subtitle}}</span>
+											</div><br>
+											<div class="event-meta">
+												<div class="cta-button">
+													<a class="btn" href="{{mesa.url}}">Ver más <i class="far fa-long-arrow-right"></i></a>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div></a>
-                            {% endfor %}
+							{% endfor %}
 							
 				
 						</div>
@@ -85,7 +90,7 @@ permalink: "mesas/index.html"
 		 <!-- Podcast
 		============================================= -->
 
-				<div class="section py-6 my-6" style="background-color: #e8f0f9">
+				<div class="section py-6 my-6" style="background-color: #e8f0f9;margin-bottom:0!important">
 					{% if collections.podcastsHighlighted %}
 					{% for podcast in collections.podcastsHighlighted | limit(1)%}
 					<div class="container">

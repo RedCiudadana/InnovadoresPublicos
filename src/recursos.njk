@@ -35,15 +35,12 @@ permalink: "recursos/index.html"
 		============================================= -->
 		<section id="content">
 			<div class="content-wrap" style="padding:0">
-               
 
-                <!---->
-                <!-- Publicación 1 - Publicaciones, reportes, investigaciones -->
                 <div class="container my-6">
                     <h2>Recursos</h2>
 					<div class="row ">
 						{% for recurso in collections.recursos %}
-						<!-- Publicación 1 - Publicaciones, reportes, investigaciones -->
+						<!-- Recurso -->
 						<div class="container">
 							<div class="event-bg event-bg-03 pos-rel mb-30 col-xl-8 col-lg-8" style="background-color:#e8f0f9!important;margin:auto">
 								<div class="row">
@@ -63,7 +60,7 @@ permalink: "recursos/index.html"
 											</div><br>
 											<div class="cta-content">
 												<div class="cta-button">
-													<a class="btn" href="{{recurso.data.enlace}}">Descargar <i class="far fa-long-arrow-right"></i></a>
+													<a class="btn" taget="_blank" href="{{recurso.data.enlace}}">Descargar <i class="far fa-long-arrow-right"></i></a>
 												</div>
 											</div>
 

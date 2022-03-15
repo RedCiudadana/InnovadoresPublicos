@@ -64,21 +64,21 @@ permalink: "innovadores/index.html"
 							{% for reunion in collections.reuniones | reverse | limit(5) %}
 					
 				
-							<a href="{{reunion.url}}"><div class="event-bg event-bg-03 pos-rel mb-30" style="margin:1rem 0;;background-color:#e8f0f9!important">
+							<a href="{{reunion.url}}"><div class="event-bg event-bg-03 pos-rel mb-30" style="margin:1rem 0;border-top:2px solid #ccc;background-color:#fff!important">
 								<div class="row" style=" align-items:center">
 									<div class="col-xl-6 col-lg-6">
-										<div class="event-img mb-20 center">
-											<h3> {{reunion.data.title}}</h3>
+										<div class="event-img mb-20 center" style="background-color:#e8f0f9;margin:2rem;padding:1rem;height:170px">
+											<!--img style="height:100%!important"  alt=""-->
 										</div>
 									</div>
 									<div class="col-xl-6 col-lg-6">
 										<div class="event-wrapper mb-20 " >
 											<div class="event-text">
 												<!--span><i class="far fa-map-marked-alt verdeo"></i> Guatemala - 8 de Septiembre 2021</span-->
-												
+												<h3> {{reunion.data.title}}</h3>
 											</div>
 											<div class="event-meta">
-												<span>{{reunion.data.date | dateFormat('DD/MM/YYYY')}}</span>
+												<span><!--i class="far fa-user-circle"></i-->{{reunion.data.date | dateFormat('DD/MM/YYYY')}}</span>
 											</div><br>
 										</div>
 									</div>
@@ -88,27 +88,52 @@ permalink: "innovadores/index.html"
 							{% endfor %}
 
 							<div class="mb-6" style="display:flex; justify-content:flex-end">
-								<a href="/reuniones/index.html">Más Reuniones<i class="icon-arrow-right" style="margin-left:5px"></i></a>
+								<div class="cta-button">
+									<a class="btn" href="/reuniones/index.html"> Más reuniones <i class="far fa-long-arrow-right"></i></a>
+								</div>
 							</div>	
 				
 						</div>
 
-						<div class="row posts-md col-mb-30 col-xl-3">
-							<h3 style="text-align:left;margin:1rem 0">Podcasts</h3>
+						<div class="row posts-md col-mb-30 col-xl-5">
+							<h3 style="text-align:left;margin:1rem 0">Recursos</h3>
 
-							{% for podcast in collections.podcasts | reverse | limit(4)%}
-							<div class="entry ">
-								<div class="grid-inner">
-									<iframe height="155px" src="{{podcast.data.link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-									<p class="txt-video">{{podcast.data.description}}</p>
+							{% for recurso in collections.recursos | reverse | limit(3) %}
+								<!-- Recurso -->
+								<div class="container">
+									<div class="event-bg event-bg-03 pos-rel mb-30 col-xl-8 col-lg-8" style="background-color:#e8f0f9!important;width:100%">
+										<div class="row">
+											<div class="col-xl-6 col-lg-6">
+												<div class="event-img mb-20">
+													<img src="{{recurso.data.image}}" alt="{{recurso.data.title}}">
+												</div>
+											</div>
+											<div class="col-xl-6 col-lg-6 d-flex justify-content-center align-items-center">
+												<div class="event-wrapper mb-20 ">
+													<div class="event-text">
+														<span><i class="far fa-map-marked-alt verdeo"></i> {{recurso.data.date | dateFormat('DD / MM / YYYY')}}</span>
+														<h3><a>{{recurso.data.title}}</a></h3>
+													</div>
+													<div class="event-meta">
+														<span><i class="far fa-user-circle"></i>{{recurso.data.description}}</span>
+													</div><br>
+													<div class="cta-content">
+														<div class="cta-button">
+															<a class="btn" taget="_blank" href="{{recurso.data.enlace}}">Descargar <i class="far fa-long-arrow-right"></i></a>
+														</div>
+													</div>
+
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
-								
-							</div>
-							{% endfor %}
+								{% endfor %}
 
-							<div class="mb-6">
-								<div style="display:flex; justify-content:flex-end">
-								<a href="/podcasts/index.html">Más Podcasts<i class="icon-arrow-right" style="margin-left:5px"></i></a>
+							<div class="mb-6" style="display:flex; justify-content:flex-end">
+								<div class="cta-button">
+									<a class="btn" href="/recursos/index.html"> Más Recursos <i class="far fa-long-arrow-right"></i></a>
+								</div>
 							</div>	
 						</div>	
 						
@@ -170,13 +195,17 @@ permalink: "innovadores/index.html"
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum est voluptatem accusamus molestiae eaque perspiciatis mollitia.</p>
 						</div-->
 
-						<div class="row posts-md col-mb-30 ">
+						<div class="row posts-md col-mb-30 my-4">
 
-							<h2 style="text-align:left;margin:1rem 0">Directorio de Participantes</h2>
+							<h2 style="text-align:left;margin:1rem 0 ">Directorio de Participantes</h2>
 
-							{% for directorios in collections.directorios | reverse | limit(5) %}
-                            <div class="col-xl-6 col-sm-12">
-                                <div class="event-bg event-bg-03 pos-rel mb-30" style="margin:1rem 0;;background-color:#e8f0f9!important">
+						</div>
+
+						<div class="row">
+
+							{% for directorios in collections.directorios | reverse | limit(4) %}
+                            <div class="col-xl-6 col-sm-12" >
+                                <div class="event-bg event-bg-03 pos-rel mb-30" style="margin:1rem 1rem;;background-color:#e8f0f9!important">
 									<div class="row" style=" align-items:center">
 										<div class="col-xl-6 col-lg-6">
 											<div class="event-img mb-20 center">
@@ -199,10 +228,14 @@ permalink: "innovadores/index.html"
                             </div>
 				
 							{% endfor %}
+	
+							
 
 							<div class="mb-6" style="display:flex; justify-content:flex-end">
-								<a href="/directorio/index.html">Más Participantes<i class="icon-arrow-right" style="margin-left:5px"></i></a>
-							</div>	
+								<div class="cta-button">
+									<a class="btn" href="/directorio/index.html"> Más participantes <i class="far fa-long-arrow-right"></i></a>
+								</div>
+							</div>
 				
 						</div>
 

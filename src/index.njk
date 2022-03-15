@@ -170,10 +170,10 @@ permalink: "index.html"
 							{% for actividad in collections.actividades | reverse | limit(5) %}
 					
 				
-							<a href="{{actividad.url}}"><div class="event-bg event-bg-03 pos-rel mb-30" style="margin:1rem 0;background-color:#e8f0f9!important">
+							<a href="{{actividad.url}}"><div class="event-bg event-bg-03 pos-rel mb-30" style="margin:1rem 0;border-top:2px solid #ccc;background-color:#fff!important">
 								<div class="row" style=" align-items:center">
 									<div class="col-xl-6 col-lg-6">
-										<div class="event-img mb-20 center">
+										<div class="event-img mb-20 center" style="background-color:#e8f0f9;margin:2rem;padding:1rem">
 											<img style="height:100%!important" src="{{actividad.data.image}}" alt="">
 										</div>
 									</div>
@@ -194,7 +194,9 @@ permalink: "index.html"
 							{% endfor %}
 
 							<div class="mb-6" style="display:flex; justify-content:flex-end">
-								<a href="/eventos/index.html">Más Actividades<i class="icon-arrow-right" style="margin-left:5px"></i></a>
+								<div class="cta-button">
+									<a class="btn" href="/actividades/index.html"> Más actividades <i class="far fa-long-arrow-right"></i></a>
+								</div>
 							</div>	
 				
 						</div>
@@ -212,9 +214,10 @@ permalink: "index.html"
 							</div>
 							{% endfor %}
 
-							<div class="mb-6">
-								<div style="display:flex; justify-content:flex-end">
-								<a href="/podcasts/index.html">Más Podcasts<i class="icon-arrow-right" style="margin-left:5px"></i></a>
+							<div class="mb-6" style="display:flex; justify-content:flex-end">
+								<div class="cta-button">
+									<a class="btn" href="/podcasts/index.html"> Más podcasts <i class="far fa-long-arrow-right"></i></a>
+								</div>
 							</div>	
 						</div>	
 						
@@ -235,11 +238,11 @@ permalink: "index.html"
 					<div class="row py-6">
 						{% if collections.mesas %}
 						{% for mesa in collections.mesas | limit(4)%}
-						<div class="event-bg event-bg-03 pos-rel mb-30 col-lg-3 col-xl-3 " style="margin:1rem 0;background-color:#fff!important">
-							<div class="row" style=" align-items:center">
+						<div class=" pos-rel mb-30 col-lg-3 col-xl-3 " style="margin:1rem 0;padding:0 2rem">
+							<div class="row event-bg event-bg-03" style="padding: 20px; align-items:center;background-color:#fff!important;height:100%;">
 								<div class="col-xl-12 col-lg-12">
 									<div class="event-img mb-20 center">
-										<img style="height:100%!important" src="{{mesa.data.icono}}" alt="">
+										<img style="height:150px!important;width:auto" src="{{mesa.data.icono}}" alt="">
 									</div>
 								</div>
 								<div class="col-xl-12 col-lg-12">
@@ -249,7 +252,9 @@ permalink: "index.html"
 											<h3> {{mesa.data.title}}</h3>
 										</div>
 										<div class="event-meta">
-											<span><!--i class="far fa-user-circle"></i-->{{mesa.data.subtitle}}</span>
+											<div class="cta-button">
+												<a class="btn" href="{{mesa.url}}">Ver más <i class="far fa-long-arrow-right"></i></a>
+											</div>
 										</div><br>
 									</div>
 								</div>

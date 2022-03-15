@@ -1,0 +1,74 @@
+---
+permalink: "directorio/index.html"
+---
+
+{% extends "base.njk" %}
+
+{% block head %}
+<title>Innovadores Publicos | Recursos</title>
+<link rel="stylesheet" href="/css/main.css" type="text/css" />
+{% endblock %}
+
+{% block content %}
+
+        <!-- Slider
+		============================================= -->
+		<section id="slider" class="slider-element bg-color" style="background-image:url('/elementos/ELEMENTOS_RIP/SLIDER/03.png')">
+			<div class="container">
+				<div class="row h-100">
+					<div class="col-lg-12 d-flex align-self-center flex-column justify-content-center pt-5 pb-0 py-lg-6 mb-0 my-lg-4">
+						<h1 style="weight:500" class="text-white text-center">Directorio de Participantes</h1>
+					</div>
+				</div>
+			</div>
+			<!--div class="bg-alt py-5">
+				<div class="container">
+					<div class="d-flex">
+						<h4 class="mb-0"><span class="counter counter-inherit fw-normal text-white"><i class="icon-line-users icon-fw"></i> <span class="color fw-semibold" data-from="100" data-to="12462" data-refresh-interval="150" data-speed="2000"></span> Members Registered.</span></h4>
+						<h4 class="mb-0 ms-5"><span class="counter counter-inherit fw-normal text-white"><i class="icon-line-message-circle icon-fw"></i> <span class="color fw-semibold" data-from="100" data-to="340333" data-refresh-interval="100" data-speed="2000"></span> Posts Created.</span></h4>
+					</div>
+				</div>
+			</div-->
+		</section>
+
+        <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap" style="padding:0">
+
+                <div class="container my-6">
+                    <h2>Recursos</h2>
+					<div class="row ">
+						{% for directorios in collections.directorios | reverse | limit(5) %}
+                        <div class="col-xl-6 col-sm-12" >
+                            <div class="event-bg event-bg-03 pos-rel mb-30" style="margin:1rem 1rem;;background-color:#e8f0f9!important">
+                                <div class="row" style=" align-items:center">
+                                    <div class="col-xl-6 col-lg-6">
+                                        <div class="event-img mb-20 center">
+                                            <img style="height:100%!important" src="{{directorios.data.icono}}" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6">
+                                        <div class="event-wrapper mb-20 " >
+                                            <div class="event-text">
+                                                <!--span><i class="far fa-map-marked-alt verdeo"></i> Guatemala - 8 de Septiembre 2021</span-->
+                                                <h3> {{directorios.data.institucionp}}</h3>
+                                            </div>
+                                            <div class="event-meta">
+                                                <span>{{directorios.data.nombresr}} | {{directorios.data.cargor}} | {{directorios.data.contactor}}</span>
+                                            </div><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        {% endfor %}
+					</div>
+
+                </div>
+
+            </div>
+        </section>
+
+{% endblock %}

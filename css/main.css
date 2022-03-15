@@ -3699,7 +3699,6 @@ label {
   line-height: 1;
   padding: 21px 44px 21px 40px;
   position: relative;
-  text-transform: uppercase;
   -webkit-transform: perspective(1px) translateZ(0px);
   transform: perspective(1px) translateZ(0px);
   -webkit-transition: 0.3s;
