@@ -11,6 +11,7 @@ permalink: "podcasts/{% if pagination.pageNumber > 0 %}pagina-{{ pagination.page
 
 {% block head %}
     <title>Innovadores Públicos | Podcasts</title>
+    <link rel="stylesheet" href="/css/maingrid.css" type="text/css" />
 {% endblock %}
 
 {% block content %}
@@ -48,14 +49,9 @@ permalink: "podcasts/{% if pagination.pageNumber > 0 %}pagina-{{ pagination.page
                                             <h3> {{item.data.title}}</h3>
                                         </div>
                                         <div class="event-meta">
-                                            <span><!--i class="far fa-user-circle"--></i>{{item.data.description}}</span>
+                                            <span><!--i class="far fa-user-circle"--></i>{{item.data.descripcion}}</span>
+                                            <span><!--i class="far fa-user-circle"--></i>{{item.data.date | dateFormat('DD/MM/YYYY')}}</span>
                                         </div><br>
-                                        <div class="cta-content">
-
-                                            <div class="cta-button">
-                                                <a class="btn" href="{{item.url}}">Ver podcasts <i class="far fa-long-arrow-right"></i></a>
-                                            </div>
-                                        </div>
 
                                     </div>
                                 </div>
