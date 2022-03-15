@@ -1,0 +1,108 @@
+{% extends "base.njk" %}
+
+{% block head %}
+<title>{{ title }}</title>
+<link rel="stylesheet" href="/css/maingrid.css" type="text/css" />
+<link rel="stylesheet" href="/css/main.css" type="text/css" />
+{% endblock %}
+
+{% block content %}
+    
+
+<!--POST-->
+<div class="max-w-screen-lg mx-auto " style="margin:3rem auto; padding:0 2rem">
+  <div class="grid grid-cols-4">
+    <div class="col-span-full">
+      <article>
+        <header>
+          <h1 class=" font-bold text-4xl text-gray-800">
+            {{ title }}
+          </h1>
+          <br>
+          <h6 class=" font-bold text-1xl text-gray-800">
+            {{ date | dateFormat('DD/MM/YYYY') }}
+          </h6>
+          <img src="{{icono}}">
+
+
+        </header>
+
+        <style>
+  
+          @media (max-width: 760px){
+              .presponsive{
+                  padding-left: 0!important;
+              }
+          }
+  
+        </style>
+        
+        <section class="content text-justify">
+          <div class="grid grid-cols-6">
+            <div class="col-span-6 md:col-span-6 py-4">
+              {{ descripcion | safe}}
+            </div>
+
+            <div class="col-span-6 md:col-span-6 py-4">
+              {{ acuerdos | safe}}
+                <br>
+                <br>
+                <div class="cta-button">
+                    <a class="btn" href="{{minuta}}" download>Descargar Minuta <i class="far fa-long-arrow-right"></i></a>
+                </div>  
+                <br>
+                <br>
+                <div class="cta-button">
+                    <a class="btn" href="{{documentosads}}" download>Descargar Documentos Adicionales <i class="far fa-long-arrow-right"></i></a>
+                </div>
+            </div>
+ 
+          </div>
+
+        </section>
+        
+      </article>
+    </div>
+    <div class="col-span-full mt-6">
+      <h2 class="font-bold text-xl border-b-2 border-yellow-500 mb-4 pb-4">Más Reuniones</h2>
+      <ul>
+        {% for reunion in collections.reuniones | reverse | limit(4)%}
+        {% if page.url !== reunion.url %}
+            <!-- reunion-->
+            <div class="container">
+                <div class="event-bg event-bg-03 pos-rel mb-30 col-xl-8 col-lg-8" style="background-color:#e8f0f9!important;margin:auto">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="event-img mb-20">
+                                <h3><a>{{reunion.data.title}}</a></h3>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 d-flex justify-content-center align-items-center">
+                            <div class="event-wrapper mb-20 ">
+                                <div class="event-text">
+                                    <span><i class="far fa-map-marked-alt verdeo"></i> {{reunion.data.date | dateFormat('DD / MM / YYYY')}}</span>
+                                    
+                                </div>
+                                <div class="event-meta">
+                                    <span><i class="far fa-user-circle"></i>{{reunion.data.descripcion}}</span>
+                                </div><br>
+                                <div class="cta-content">
+                                    <div class="cta-button">
+                                        <a class="btn" href="{{reunion.url}}">Ver más <i class="far fa-long-arrow-right"></i></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        {% endfor %}
+
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
