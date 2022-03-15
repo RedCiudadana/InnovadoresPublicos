@@ -84,35 +84,40 @@ permalink: "recursos/index.html"
                 <!---->
                 <!-- Publicación 1 - Publicaciones, reportes, investigaciones -->
                 <div class="container my-6">
-                    <h2>Publicaciones</h2>
-                    {% for publicacion in collections.publicaciones %}
-                    <div class="event-bg event-bg-03 pos-rel mb-30">
-                        <div class="row">
-                            <div class="col-xl-6 col-lg-6">
-                                <div class="event-img mb-20">
-                                    <a><img src="{{publicacion.data.image}}" alt="{{publicacion.data.title}}"></a>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-6">
-                                <div class="event-wrapper mb-20 ">
-                                    <div class="event-text">
-                                        <span><i class="far fa-map-marked-alt verdeo"></i> {{publicacion.data.date | dateFormat('DD / MM / YYYY')}}</span>
-                                        <h3><a>{{publicacion.data.title}}</a></h3>
-                                    </div>
-                                    <div class="event-meta">
-                                        <span><i class="far fa-user-circle"></i>{{publicacion.data.description}}</span>
-                                    </div><br>
-                                    <div class="cta-content">
-                                        <div class="cta-button">
-                                            <a class="btn" href="{{publicacion.data.enlace}}">Descargar <i class="far fa-long-arrow-right"></i></a>
-                                        </div>
-                                    </div>
+                    <h2>Recursos</h2>
+					<div class="row ">
+						{% for recurso in collections.recursos %}
+						<!-- Publicación 1 - Publicaciones, reportes, investigaciones -->
+						<div class="container">
+							<div class="event-bg event-bg-03 pos-rel mb-30 col-xl-8 col-lg-8" style="background-color:#e8f0f9!important;margin:auto">
+								<div class="row">
+									<div class="col-xl-6 col-lg-6">
+										<div class="event-img mb-20">
+											<img src="{{recurso.data.image}}" alt="{{recurso.data.title}}">
+										</div>
+									</div>
+									<div class="col-xl-6 col-lg-6 d-flex justify-content-center align-items-center">
+										<div class="event-wrapper mb-20 ">
+											<div class="event-text">
+												<span><i class="far fa-map-marked-alt verdeo"></i> {{recurso.data.date | dateFormat('DD / MM / YYYY')}}</span>
+												<h3><a>{{recurso.data.title}}</a></h3>
+											</div>
+											<div class="event-meta">
+												<span><i class="far fa-user-circle"></i>{{recurso.data.description}}</span>
+											</div><br>
+											<div class="cta-content">
+												<div class="cta-button">
+													<a class="btn" href="{{recurso.data.enlace}}">Descargar <i class="far fa-long-arrow-right"></i></a>
+												</div>
+											</div>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
 
                 </div>
 
