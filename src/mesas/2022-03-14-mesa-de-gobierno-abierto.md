@@ -1,7 +1,7 @@
 ---
-title: Mesa de Gobierno Abierto
+title: Grupo de Gobierno Abierto
 icono: /images/posts/icono-11.png
-subtitle: En esta mesa hablaremos sobre Gobierno Abierto
+subtitle: En este Grupo hablaremos sobre Gobierno Abierto
 descripcion: Texto enriquecido
 highlight: false
 ---
