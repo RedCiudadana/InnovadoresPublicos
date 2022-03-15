@@ -208,11 +208,11 @@ permalink: "index.html"
 						<div class="row posts-md col-mb-30 col-xl-3">
 							<h3 style="text-align:left;margin:1rem 0">Podcasts</h3>
 
-							{% for podcast in collections.podcast | reverse | limit(4)%}
+							{% for podcast in collections.podcasts | reverse | limit(4)%}
 							<div class="entry ">
 								<div class="grid-inner">
-									<iframe width="560" height="315" src="{{video.data.link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-									<p class="txt-video">{{video.data.description}}</p>
+									<iframe height="155px" src="{{podcast.data.link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<p class="txt-video">{{podcast.data.description}}</p>
 								</div>
 								
 							</div>
@@ -220,7 +220,7 @@ permalink: "index.html"
 
 							<div class="mb-6">
 								<div style="display:flex; justify-content:flex-end">
-								<a href="/videos/index.html">Más Podcasts<i class="icon-arrow-right" style="margin-left:5px"></i></a>
+								<a href="/podcasts/index.html">Más Podcasts<i class="icon-arrow-right" style="margin-left:5px"></i></a>
 							</div>	
 						</div>	
 						

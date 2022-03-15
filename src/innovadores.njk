@@ -6,6 +6,7 @@ permalink: "innovadores/index.html"
 
 {% block head %}
 <title>Innovadores Publicos | Innovadores</title>
+<link rel="stylesheet" href="/css/main.css" type="text/css" />
 {% endblock %}
 
 {% block content %}
@@ -63,26 +64,26 @@ permalink: "innovadores/index.html"
 							{% for reunion in collections.reuniones | reverse | limit(5) %}
 					
 				
-							<div class="event-bg event-bg-03 pos-rel mb-30" style="margin:1rem 0;">
+							<a href="{{reunion.url}}"><div class="event-bg event-bg-03 pos-rel mb-30" style="margin:1rem 0;;background-color:#e8f0f9!important">
 								<div class="row" style=" align-items:center">
 									<div class="col-xl-6 col-lg-6">
 										<div class="event-img mb-20 center">
-											<a href="{{evento.url}}"><img style="height:100%!important" src="{{evento.data.image}}" alt=""></a>
+											<h3> {{reunion.data.title}}</h3>
 										</div>
 									</div>
 									<div class="col-xl-6 col-lg-6">
 										<div class="event-wrapper mb-20 " >
 											<div class="event-text">
 												<!--span><i class="far fa-map-marked-alt verdeo"></i> Guatemala - 8 de Septiembre 2021</span-->
-												<h3> {{evento.data.title}}</h3>
+												
 											</div>
 											<div class="event-meta">
-												<span><!--i class="far fa-user-circle"></i-->{{evento.data.autor}} | {{evento.data.date | dateFormat('DD/MM/YYYY')}}</span>
+												<span>{{reunion.data.date | dateFormat('DD/MM/YYYY')}}</span>
 											</div><br>
 										</div>
 									</div>
 								</div>
-							</div>
+							</div></a>
 
 							{% endfor %}
 
@@ -95,11 +96,11 @@ permalink: "innovadores/index.html"
 						<div class="row posts-md col-mb-30 col-xl-3">
 							<h3 style="text-align:left;margin:1rem 0">Podcasts</h3>
 
-							{% for video in collections.videos | reverse | limit(4)%}
+							{% for podcast in collections.podcasts | reverse | limit(4)%}
 							<div class="entry ">
 								<div class="grid-inner">
-									<iframe width="560" height="315" src="{{video.data.link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-									<p class="txt-video">{{video.data.description}}</p>
+									<iframe height="155px" src="{{podcast.data.link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<p class="txt-video">{{podcast.data.description}}</p>
 								</div>
 								
 							</div>
@@ -107,7 +108,7 @@ permalink: "innovadores/index.html"
 
 							<div class="mb-6">
 								<div style="display:flex; justify-content:flex-end">
-								<a href="/videos/index.html">Más Podcasts<i class="icon-arrow-right" style="margin-left:5px"></i></a>
+								<a href="/podcasts/index.html">Más Podcasts<i class="icon-arrow-right" style="margin-left:5px"></i></a>
 							</div>	
 						</div>	
 						
@@ -179,28 +180,28 @@ permalink: "innovadores/index.html"
 
 							<h2 style="text-align:left;margin:1rem 0">Directorio de Participantes</h2>
 
-							{% for participante in collections.participantes | reverse | limit(5) %}
+							{% for directorios in collections.directorios | reverse | limit(5) %}
                             <div class="col-xl-6 col-sm-12">
-                                <div class="event-bg event-bg-03 pos-rel mb-30" style="margin:1rem 0;">
-                                    <div class="row" style=" align-items:center">
-                                        <div class="col-xl-6 col-lg-6">
-                                            <div class="event-img mb-20 center">
-                                                <a href="{{evento.url}}"><img style="height:100%!important" src="{{evento.data.image}}" alt=""></a>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6">
-                                            <div class="event-wrapper mb-20 " >
-                                                <div class="event-text">
-                                                    <!--span><i class="far fa-map-marked-alt verdeo"></i> Guatemala - 8 de Septiembre 2021</span-->
-                                                    <h3> {{evento.data.title}}</h3>
-                                                </div>
-                                                <div class="event-meta">
-                                                    <span><!--i class="far fa-user-circle"></i-->{{evento.data.autor}} | {{evento.data.date | dateFormat('DD/MM/YYYY')}}</span>
-                                                </div><br>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div class="event-bg event-bg-03 pos-rel mb-30" style="margin:1rem 0;;background-color:#e8f0f9!important">
+									<div class="row" style=" align-items:center">
+										<div class="col-xl-6 col-lg-6">
+											<div class="event-img mb-20 center">
+												<img style="height:100%!important" src="{{directorios.data.icono}}" alt="">
+											</div>
+										</div>
+										<div class="col-xl-6 col-lg-6">
+											<div class="event-wrapper mb-20 " >
+												<div class="event-text">
+													<!--span><i class="far fa-map-marked-alt verdeo"></i> Guatemala - 8 de Septiembre 2021</span-->
+													<h3> {{directorios.data.institucionp}}</h3>
+												</div>
+												<div class="event-meta">
+													<span>{{directorios.data.nombresr}} | {{directorios.data.cargor}} | {{directorios.data.contactor}}</span>
+												</div><br>
+											</div>
+										</div>
+									</div>
+								</div>
                             </div>
 				
 							{% endfor %}

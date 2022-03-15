@@ -1,0 +1,86 @@
+---
+pagination:
+  data: collections.podcasts
+  size: 5
+  alias: list
+  reverse: true
+permalink: "podcasts/{% if pagination.pageNumber > 0 %}pagina-{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
+---
+
+{% extends "base.njk" %}
+
+{% block head %}
+    <title>Innovadores Públicos | Podcasts</title>
+{% endblock %}
+
+{% block content %}
+
+        <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+
+                <!-- event-area-start -->
+                <div class="event-area pt-60 pb-130">
+                    <div class="container">
+
+                        <div class="container clearfix">
+                            <div class="heading-block center">
+
+                                <h2>Podcasts</h2>
+                                
+                            </div>
+                        </div>
+
+                        {% if list%}
+                        {% for item in list%}
+                        <div class="event-bg event-bg-03 pos-rel mb-30" style="margin:1rem 0">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="event-img mb-20 center" style="width:80%;margin:auto">
+                                        <iframe src="{{item.data.link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="event-wrapper mb-20 ">
+                                        <div class="event-text">
+                                            <!--span><i class="far fa-map-marked-alt verdeo"></i> Guatemala - 8 de Septiembre 2021</span-->
+                                            <h3> {{item.data.title}}</h3>
+                                        </div>
+                                        <div class="event-meta">
+                                            <span><!--i class="far fa-user-circle"--></i>{{item.data.description}}</span>
+                                        </div><br>
+                                        <div class="cta-content">
+
+                                            <div class="cta-button">
+                                                <a class="btn" href="{{item.url}}">Ver podcasts <i class="far fa-long-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        {% endif %}
+
+                        <div class="d-flex justify-content-center">
+                            {% if pagination.href.previous %}
+                            <div class="mx-4">
+                                {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">← Podcasts más recientes</a>{% else %}←  Nuevos blog{% endif %}
+                            </div>
+                            {% endif %}
+                            {% if pagination.href.next %}
+                            <div class="mx-4">
+                                {% if pagination.href.next %}<a href="{{ pagination.href.next }}">Podcasts anteriores →</a>{% else %}Blog anteriores →{% endif %}
+                            </div>
+                            {% endif %}
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+{% endblock %}
