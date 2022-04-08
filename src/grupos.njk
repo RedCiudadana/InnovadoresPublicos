@@ -13,7 +13,7 @@ permalink: "mesas/index.html"
 
         <!-- Slider
 		============================================= -->
-		<section id="slider" class="slider-element bg-color" style="background-image:url('/elementos/ELEMENTOS_RIP/SLIDER/03.png')">
+		<section id="slider" class="slider-element bg-color" >
 			<div class="container">
 				<div class="row h-100">
 					<div class="col-lg-12 d-flex align-self-center flex-column justify-content-center pt-5 pb-0 py-lg-6 mb-0 my-lg-4">
@@ -52,13 +52,13 @@ permalink: "mesas/index.html"
 
                             {% for mesa in collections.mesas%}
                             <div class=" pos-rel  col-lg-6 col-xl-6" style="margin:1rem 0;">
-								<div class="row  event-bg event-bg-03" style=" align-items:center;background-color:#e8f0f9!important;margin:0 1rem!important;height:100%">
-									<div class="col-xl-6 col-lg-6">
+								<div class="row  event-bg event-bg-03" style=" align-items:center;background-color:#e8f0f9!important;margin:0 1rem!important;height:100%;padding:5%!important">
+									<div class="col-xl-4 col-lg-4">
 										<div class="event-img mb-20 center">
-											<img style="height:100%!important" src="{{mesa.data.icono}}" alt="">
+											<img style="height:150px;width:auto" src="{{mesa.data.icono}}" alt="">
 										</div>
 									</div>
-									<div class="col-xl-6 col-lg-6">
+									<div class="col-xl-8 col-lg-8" style="text-align:left">
 										<div class="event-wrapper mb-20 " >
 											<div class="event-text">
 												<!--span><i class="far fa-map-marked-alt verdeo"></i> Guatemala - 8 de Septiembre 2021</span-->
