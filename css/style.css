@@ -213,7 +213,7 @@ li {
 
 body {
   line-height: 1.5;
-  color: #555;
+  color: #09334E;
   font-family: "Metropolis-Regular", sans-serif !important;
 }
 
@@ -250,11 +250,15 @@ h3,
 h4,
 h5,
 h6 {
-  color: #444;
+  color: #09334E!important;
   font-weight: 600;
   line-height: 1.5;
   margin: 0 0 30px 0;
   font-family: "Metropolis-Bold", sans-serif !important;
+}
+
+span, p {
+  color: #09334E!important;
 }
 
 h5,
