@@ -520,7 +520,7 @@ span.middot {
 
 .bg-color,
 .bg-color #header-wrap {
-  background-color: #09334e !important;
+  background-color: #219adb !important;
 }
 
 .color {
@@ -3922,7 +3922,6 @@ body:not(.top-search-open) .top-search-parent #primary-menu-trigger {
   font-weight: 700;
   font-size: 0.8125rem;
   letter-spacing: 1px;
-  text-transform: uppercase;
   font-family: "Metropolis-Regular", sans-serif;
 }
 

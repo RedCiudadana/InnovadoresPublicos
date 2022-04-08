@@ -13,7 +13,7 @@ permalink: "index.html"
 
         <!-- Slider
 		============================================= -->
-		<section id="slider" class="slider-element bg-color" style="background-image:url('/elementos/ELEMENTOS_RIP/SLIDER/03.png')">
+		<section id="slider" class="slider-element bg-color" >
 			<div class="container">
 				<div class="row h-100">
 					<div class="col-lg-6 d-flex align-self-center flex-column pt-5 pb-0 py-lg-6 mb-0 my-lg-4">
@@ -24,7 +24,7 @@ permalink: "index.html"
 					</div>
 
 					<div class="col-lg-6 d-flex align-self-center flex-column">
-						<img src="/elementos/ELEMENTOS_RIP/SLIDER/04.png" alt="Hero Image" style="z-index: 3;">
+						<img src="/elementos/MEJORAS_ELEMENTOS/IMAGEN-SLIDER.png" alt="Hero Image" style="z-index: 3;">
 					</div>
 				</div>
 			</div>
@@ -98,7 +98,7 @@ permalink: "index.html"
 				<div class="section py-6 my-6" style="background-color: #e8f0f9">
 					{% if collections.podcastsHighlighted %}
 					{% for podcast in collections.podcastsHighlighted | limit(1)%}
-					<div class="container">
+					<div class="container" style="margin-left:0!important">
 						<div class="row align-items-center col-mb-50">
 							<!--div class="col-md-6">
 								<img src="demos/forum/images/doc.svg" alt="Doc Image">
@@ -137,13 +137,13 @@ permalink: "index.html"
 		============================================= -->
 
 				<div class="container my-4">
-					<div class="row text-center mb-5" style="justify-content:space-evenly;align-items:flex-start">
+					<div class="row text-center mb-5" style="justify-content:space-between;align-items:flex-start">
 						<!--div class="col-lg-6">
 							<h3 class="display-4 fw-bolder mb-3">Publicaciones</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum est voluptatem accusamus molestiae eaque perspiciatis mollitia.</p>
 						</div-->
 
-						<div class="row posts-md col-mb-30 col-xl-6">
+						<div class="row posts-md col-mb-30 col-xl-8">
 								
 							<!--div class="entry col-sm-6 col-xl-12">
 								<div class="grid-inner">
@@ -201,8 +201,8 @@ permalink: "index.html"
 				
 						</div>
 
-						<div class="row posts-md col-mb-30 col-xl-3">
-							<h3 style="text-align:left;margin:1rem 0">Podcasts</h3>
+						<div class="row posts-md col-mb-30 col-xl-4">
+							<h3 style="text-align:left;margin:1rem 0">Iniciativas</h3>
 
 							{% for podcast in collections.podcasts | reverse | limit(4)%}
 							<div class="entry ">
@@ -216,7 +216,7 @@ permalink: "index.html"
 
 							<div class="mb-6" style="display:flex; justify-content:flex-end">
 								<div class="cta-button">
-									<a class="btn" href="/podcasts/index.html"> Más podcasts <i class="far fa-long-arrow-right"></i></a>
+									<a class="btn" href="/podcasts/index.html"> Más iniciativas <i class="far fa-long-arrow-right"></i></a>
 								</div>
 							</div>	
 						</div>	
@@ -241,8 +241,8 @@ permalink: "index.html"
 						<div class=" pos-rel mb-30 col-lg-3 col-xl-3 " style="margin:1rem 0;padding:0 2rem">
 							<div class="row event-bg event-bg-03" style="padding: 20px; align-items:center;background-color:#fff!important;height:100%;">
 								<div class="col-xl-12 col-lg-12">
-									<div class="event-img mb-20 center">
-										<img style="height:150px!important;width:auto" src="{{mesa.data.icono}}" alt="">
+									<div class="event-img  center">
+										<img style="height:70px!important;width:auto" src="{{mesa.data.icono}}" alt="">
 									</div>
 								</div>
 								<div class="col-xl-12 col-lg-12">
