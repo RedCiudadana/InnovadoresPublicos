@@ -106,7 +106,7 @@ collections:
           hint: "Display posts in home's highlights",
         }
   - name: "mesas" # Used in routes, e.g., /admin/collections/blog
-    label: "Mesas de Trabajo" # Used in the UI
+    label: "Grupos de Trabajo" # Used in the UI
     folder: "src/mesas" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
