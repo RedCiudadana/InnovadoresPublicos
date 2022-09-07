@@ -18421,69 +18421,6 @@ label.checkbox {
   margin: 10px 0;
   font-size: 12px;
 }
-
-
-.invoice-content .mobile-social-icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.invoice-content .mobile-social-icon h6 {
-  display: inline-block;
-  margin-right: 15px;
-  margin-bottom: 0;
-}
-
-.invoice-content .mobile-social-icon a {
-  text-align: center;
-  font-size: 14px;
-  margin-right: 5px;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  height: 30px;
-  width: 30px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  background: #053D5E;
-  border-radius: 30px;
-  line-height: 1;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.invoice-content .mobile-social-icon a img {
-  max-width: 16px;
-}
-
-.invoice-content .mobile-social-icon a img:hover {
-  opacity: 0.8;
-}
-
-.invoice-content .mobile-social-icon a:hover {
-  -webkit-transform: translateY(-2px);
-  transform: translateY(-2px);
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  margin-top: -2px;
-}
-
-.invoice-content .mobile-social-icon a:last-child {
-  margin-right: 0;
-}
-
 /*newsletter*/
 footer .mobile-social-icon {
   display: -webkit-box;
@@ -18518,4 +18455,39 @@ footer .mobile-social-icon h6 {
 
 .text-white {
   color: #fff !important;
+}
+
+.mobile-social-icon{
+  align-items: center;
+}
+
+.mobile-social-icon a {
+  text-align: center;
+  font-size: 14px;
+  margin-right: 5px;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  height: 30px;
+  width: 30px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background: #053D5E;
+  border-radius: 30px;
+  line-height: 1;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.mobile-social-icon a i{
+  color: #fff;
+  padding: 2px;
+  align-self: center;
+}
+
+.mobile-social-icon a i:hover{
+  color: #ccc;
 }
