@@ -18491,3 +18491,24 @@ footer .mobile-social-icon h6 {
 .mobile-social-icon a i:hover{
   color: #ccc;
 }
+
+/*page loading*/
+.preloader {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999999;
+  -webkit-transition: .6s;
+  transition: .6s;
+  margin: 0 auto;
+}
+
+.preloader img.jump {
+  max-height: 100px;
+  max-width: 100px;
+}
