@@ -40,20 +40,20 @@
         <section class="content text-justify">
           <div class="grid grid-cols-6">
             <div class="col-span-6 md:col-span-6 py-4">
-              {{ descripcion | safe}}
+              <p>{{ descripcion | rmj | safe}}</p>
             </div>
 
             <div class="col-span-6 md:col-span-6 py-4">
-              <p>{{ acuerdos }}</p>
+              <!--p>{{ acuerdos }}</p-->
                 <br>
                 <br>
                 <div class="cta-button">
-                    <a class="btn" href="{{minuta}}" download>Descargar Minuta <i class="far fa-long-arrow-right"></i></a>
+                    <a class="btn" href="{{minuta}}" download>Descargar Minuta <i class="fa fa-long-arrow-right"></i></a>
                 </div>  
                 <br>
                 <br>
                 <div class="cta-button">
-                    <a class="btn" href="{{documentosads}}" download>Descargar Documentos Adicionales <i class="far fa-long-arrow-right"></i></a>
+                    <a class="btn" href="{{documentosads}}" download>Descargar Documentos Adicionales <i class="fa fa-long-arrow-right"></i></a>
                 </div>
             </div>
  
@@ -66,37 +66,29 @@
     <div class="col-span-full mt-6">
       <h2 class="font-bold text-xl border-b-2 border-yellow-500 mb-4 pb-4">Más Reuniones</h2>
       <ul>
-        {% for reunion in collections.reuniones | reverse | limit(4)%}
+        {% for reunion in collections.reuniones | limit(4)%}
         {% if page.url !== reunion.url %}
             <!-- reunion-->
-            <div class="container">
-                <div class="event-bg event-bg-03 pos-rel mb-30 col-xl-8 col-lg-8" style="background-color:#e8f0f9!important;margin:auto">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6">
-                            <div class="event-img mb-20">
-                                <h3><a>{{reunion.data.title}}</a></h3>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 d-flex justify-content-center align-items-center">
-                            <div class="event-wrapper mb-20 ">
-                                <div class="event-text">
-                                    <span><i class="far fa-map-marked-alt verdeo"></i> {{reunion.data.date | dateFormat('DD / MM / YYYY')}}</span>
-                                    
-                                </div>
-                                <div class="event-meta">
-                                    <span><i class="far fa-user-circle"></i>{{reunion.data.descripcion}}</span>
-                                </div><br>
-                                <div class="cta-content">
-                                    <div class="cta-button">
-                                        <a class="btn" href="{{reunion.url}}">Ver más <i class="far fa-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+						<a href="{{reunion.url}}"><div class="event-bg event-bg-03 pos-rel mb-30" style="margin:1rem 0;border-top:2px solid #ccc;background-color:#fff!important">
+							<div class="row" style=" align-items:center">
+								<div class="col-xl-6 col-lg-6">
+									<div class="event-img mb-20 center" style="height:300px">
+										<img src="{{reunion.data.imagen}}" style="height:100%!important;"  alt="">
+									</div>
+								</div>
+								<div class="col-xl-6 col-lg-6">
+									<div class="event-wrapper mb-20 " >
+										<div class="event-text">
+											<!--span><i class="far fa-map-marked-alt verdeo"></i> Guatemala - 8 de Septiembre 2021</span-->
+											<h3> {{reunion.data.title}}</h3>
+										</div>
+										<div class="event-meta">
+											<span><!--i class="far fa-user-circle"></i-->{{reunion.data.date | dateFormat('DD/MM/YYYY')}}</span>
+										</div><br>
+									</div>
+								</div>
+							</div>
+						</div></a>
         {% endif %}
         {% endfor %}
 

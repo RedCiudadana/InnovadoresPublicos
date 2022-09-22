@@ -1,5 +1,6 @@
 const moment = require("moment");
 const now = new Date();
+const rmj = require('render-markdown-js');
 
 module.exports = function (eleventyConfig) {
 
@@ -13,6 +14,14 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('images');
     eleventyConfig.addPassthroughCopy('admin');
 
+    eleventyConfig.addCollection('podcastsHighlighted', (collectionApi) => {
+        return collectionApi.getFilteredByTag('podcasts').filter((item) => {
+            return item.data.highlight == true;
+        });
+    });
+
+    // FILTROS
+
     eleventyConfig.addNunjucksFilter("limit", function(array, limit) {
         return array.slice(0, limit);
     });
@@ -21,9 +30,7 @@ module.exports = function (eleventyConfig) {
         return moment(date).format(format);
     });
 
-    eleventyConfig.addCollection('podcastsHighlighted', (collectionApi) => {
-        return collectionApi.getFilteredByTag('podcasts').filter((item) => {
-            return item.data.highlight == true;
-        });
+    eleventyConfig.addNunjucksFilter("rmj", function (content) {
+        return rmj(content);
     });
 }
