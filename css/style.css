@@ -18512,3 +18512,28 @@ footer .mobile-social-icon h6 {
   max-height: 100px;
   max-width: 100px;
 }
+
+.redes-sidebar{
+  position: fixed;
+  right: 0;
+  top: 40%;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.redes-sidebar a{
+  padding: 10px;
+  background: #219adb;
+  margin: 3px 2px;
+  color: #fff;
+  border: #fff 1px solid;
+  border-radius: 5px 0 0 5px;
+}
+
+.redes-sidebar a:hover{
+  color: #219adb;
+  background-color: #fff;
+  border: #219adb 1px solid;
+  transform: translateX(-5px);
+}
