@@ -522,7 +522,7 @@ span.middot {
 
 .bg-color,
 .bg-color #header-wrap {
-  background-color: #219adb !important;
+  background-color: #0B2A4A !important;
 }
 
 .color {
@@ -18524,7 +18524,7 @@ footer .mobile-social-icon h6 {
 
 .redes-sidebar a{
   padding: 10px;
-  background: #219adb;
+  background: #0B2A4A;
   margin: 3px 2px;
   color: #fff;
   border: #fff 1px solid;
@@ -18532,9 +18532,9 @@ footer .mobile-social-icon h6 {
 }
 
 .redes-sidebar a:hover{
-  color: #219adb;
+  color: #0B2A4A;
   background-color: #fff;
-  border: #219adb 1px solid;
+  border: #0B2A4A 1px solid;
   transform: translateX(-5px);
 }
 
