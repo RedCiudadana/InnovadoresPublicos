@@ -13,11 +13,10 @@ permalink: "innovadores/index.html"
 
         <!-- Slider
 		============================================= -->
-		<section id="slider" class="slider-element bg-color" >
+		<section id="slider" class="slider-element bg-color" style="background-image:url('/images/red/SLIDER/INOVADORES_P-21.png');background-size:cover">
 			<div class="container">
-				<div class="row h-100">
+				<div class="row h-100 py-6">
 					<div class="col-lg-12 d-flex align-self-center flex-column justify-content-center pt-5 pb-0 py-lg-6 mb-0 my-lg-4">
-						<img src="/elementos/ELEMENTOS_RIP/ICONOS/ICONO-14.png"  style="z-index: 3; width:150px; align-self:center">
 						<h1 style="weight:500" class="text-white text-center">Innovación</h1>
 					</div>
 				</div>
@@ -35,210 +34,88 @@ permalink: "innovadores/index.html"
         <!-- Content
 		============================================= -->
 		<section id="content">
-			<div class="content-wrap" style="padding-bottom:0">
+			<div class="content-wrap p-0" style="padding-bottom:0">
 
-		<!-- Nosotros
-		============================================= -->
+				<!-- Reuniones y Recursos
+				============================================= -->
+				<div class="section py-6 m-0" style="background-color: #e6eff6">
+					<div class="container">
+						<div class="row col-mb-30">
+							<div class="container">
+								<h2 style="text-align:left;margin:1rem 0">Reuniones</h2>
 
-				<!--div class="container clearfix">
-					<div class="heading-block center">
-						<h2>Mesas de Trabajo</h2>
-						<span>Built with passion &amp; intuitiveness in mind. Canvas is a masterclass piece of work presented to you.</span>
-					</div>
-                </div-->
+								<div class="row">
+									{% for reunion in collections.reuniones | limit(5) %}
+									<div class="col-lg-6 col-sm-12">
+										<a href="{{reunion.url}}">
+											<div class="cuadro-actividad2">
+												<div class="imagen-actividad">
+													<img style="padding:0!important" src="{{reunion.data.imagen}}">
+												</div>
+												<div class="contenido-actividad">
+													<span><img src="/images/red/ICONOS/INOVADORES_P-14.png">{{reunion.data.date | dateFormat('DD/MM/YYYY')}}</span>
+													<h3>{{reunion.data.title}}</h3>
+													<p>{{reunion.data.autor}}<p>
+												</div>
+											</div>
+										</a>
+									</div>
+									{% endfor %}
+								</div>
 
-        <!-- Reuniones y Recursos
-		============================================= -->
-
-				<div class="container my-4">
-					<div class="row text-center mb-5" style="justify-content:space-evenly;align-items:flex-start">
-						<!--div class="col-lg-6">
-							<h3 class="display-4 fw-bolder mb-3">Publicaciones</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum est voluptatem accusamus molestiae eaque perspiciatis mollitia.</p>
-						</div-->
-
-						<div class="row posts-md col-mb-30 col-xl-6">
-
-							<h2 style="text-align:left;margin:1rem 0">Reuniones</h2>
-
-							{% for reunion in collections.reuniones | limit(5) %}
+								<div style="display:flex; justify-content:flex-end">
+									<div class="row">
+										<div class="cta-button">
+											<a class="btn" href="/actividades/index.html"> Más actividades <i class="fa fa-long-arrow-right"></i></a>
+										</div>
+									</div>
+								</div>	
 					
-				
-							<a href="{{reunion.url}}"><div class="event-bg event-bg-03 pos-rel mb-30" style="margin:1rem 0;border-top:2px solid #ccc;background-color:#fff!important">
-								<div class="row" style=" align-items:center">
-									<div class="col-xl-6 col-lg-6">
-										<div class="event-img mb-20 center" style="background-color:#e8f0f9;height:170px">
-											<img src="{{reunion.data.imagen}}" style="height:100%!important"  alt="">
-										</div>
-									</div>
-									<div class="col-xl-6 col-lg-6">
-										<div class="event-wrapper mb-20 " >
-											<div class="event-text">
-												<!--span><i class="far fa-map-marked-alt verdeo"></i> Guatemala - 8 de Septiembre 2021</span-->
-												<h3> {{reunion.data.title}}</h3>
-											</div>
-											<div class="event-meta">
-												<span><!--i class="far fa-user-circle"></i-->{{reunion.data.date | dateFormat('DD/MM/YYYY')}}</span>
-											</div><br>
-										</div>
-									</div>
-								</div>
-							</div></a>
-
-							{% endfor %}
-
-							<div class="mb-6" style="display:flex; justify-content:flex-end">
-								<div class="cta-button">
-									<a class="btn" href="/reuniones/index.html"> Más reuniones <i class="fa fa-long-arrow-right"></i></a>
-								</div>
-							</div>	
-				
+							</div>
 						</div>
-
-						<div class="row posts-md col-mb-30 col-xl-5">
-							<h3 style="text-align:left;margin:1rem 0">Recursos</h3>
-								<!-- Recurso -->
-								<div class="container">
-								{% for recurso in collections.recursos | reverse | limit(3) %}
-								
-									<a target="_blank" href="{{recurso.data.enlace}}"><div class="event-bg event-bg-03 pos-rel mb-30 col-xl-12 col-lg-12" style="background-color:#e8f0f9!important;width:100%">
-										<div class="row">
-											<div class="col-xl-6 col-lg-6">
-												<div class="event-img mb-20">
-													<img src="{{recurso.data.image}}" alt="{{recurso.data.title}}">
-												</div>
-											</div>
-											<div class="col-xl-6 col-lg-6 d-flex justify-content-center align-items-center">
-												<div class="event-wrapper mb-20 ">
-													<div class="event-text">
-														<span><i class="far fa-map-marked-alt verdeo"></i> {{recurso.data.date | dateFormat('DD / MM / YYYY')}}</span>
-														<h3>{{recurso.data.title}}</h3>
-													</div>
-													<div class="event-meta">
-														<span><i class="fa fa-user-circle"></i>{{recurso.data.description}}</span>
-													</div><br>
-													<!--div class="cta-content">
-														<div class="cta-button">
-															<a class="btn" taget="_blank" href="{{recurso.data.enlace}}">Descargar <i class="far fa-long-arrow-right"></i></a>
-														</div>
-													</div-->
-
-												</div>
-											</div>
-										</div>
-									</div></a>
-								
-								{% endfor %}
-								</div>
-							<div class="mb-6" style="display:flex; justify-content:flex-end">
-								<div class="cta-button">
-									<a class="btn" href="/recursos/index.html"> Más Recursos <i class="far fa-long-arrow-right"></i></a>
-								</div>
-							</div>	
-						</div>	
-						
-
 					</div>	
 				</div>
+
+				<div class="section py-6 m-0">
+					<div class="container">
+						<div class="row col-mb-30">
+							<div class="container">
+								<h2 style="text-align:left;margin:1rem 0">Recursos</h2>
+
+								<div class="row">
+									{% for recurso in collections.recursos | reverse | limit(3) %}
+									<div class="col-lg-4 col-sm-12">
+										<a href="{{recurso.url}}">
+											<div class="cuadro-actividad">
+												<div class="imagen-actividad">
+													<img style="padding:0!important" src="{{recurso.data.image}}">
+												</div>
+												<div class="contenido-actividad">
+													<span><img src="/images/red/ICONOS/INOVADORES_P-14.png">{{recurso.data.date | dateFormat('DD/MM/YYYY')}}</span>
+													<h3>{{recurso.data.title}}</h3>
+													<p>{{recurso.data.autor}}<p>
+												</div>
+											</div>
+										</a>
+									</div>
+									{% endfor %}
+								</div>
+
+								<div style="display:flex; justify-content:flex-end">
+									<div class="row">
+										<div class="cta-button">
+											<a class="btn" href="/actividades/index.html"> Más actividades <i class="fa fa-long-arrow-right"></i></a>
+										</div>
+									</div>
+								</div>	
+					
+							</div>
+						</div>
+					</div>	
+				</div>
+
 			</div>
 
-
-
-        <!-- Podcast
-		============================================= -->
-
-				<!--div class="section py-6 my-6" style="background-color: #e8f0f9">
-					{% if collections.podcastsHighlighted %}
-					{% for podcast in collections.podcastsHighlighted | limit(1)%}
-					<div class="container">
-						<div class="row align-items-center col-mb-50">
-							<div class="col-md-12 text-center">
-								<div class="row posts-md col-mb-30" style="align-items:center">
-
-									<div class="entry col-sm-6 col-xl-6">
-										<div class="grid-inner">
-											<span>Podcast</span>
-											<h3>{{podcast.data.title}}</h3>
-											<p>{{podcast.data.descripcion}}</p>
-											<div class="cta-button">
-												<a class="btn" href="#">Suscribirse <i class="far fa-long-arrow-right"></i></a>
-											</div>
-										</div>
-									</div>
-									<div class="entry col-sm-6 col-xl-6">
-										<div class="grid-inner">
-											<iframe src="{{podcast.data.link}}" width="100%"
-                							height="232" frameBorder="0" allowfullscreen=""
-               								 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-										</div>
-									</div>
-									
-								</div>
-							</div>
-						</div>
-					</div>
-					{% endfor %}
-					{% endif %}
-				</div-->
-
-
-        <!-- Directorio de Participantes
-		============================================= -->
-
-				<!--div class="container my-4">
-					<div class="row text-center mb-5" style="justify-content:space-evenly;align-items:flex-start">
-						<div class="col-lg-6">
-							<h3 class="display-4 fw-bolder mb-3">Publicaciones</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum est voluptatem accusamus molestiae eaque perspiciatis mollitia.</p>
-						</div>
-
-						<div class="row posts-md col-mb-30 my-4" >
-							<div class="d-flex" style="justify-content:space-between">
-								<h2 style="text-align:left;margin:1rem 0 ">Directorio de Participantes</h2>
-								<div>
-									<a class="btn" href="/directorio/index.html"> Ver más <i class="far fa-long-arrow-right"></i></a>
-								</div>
-							</div>
-							
-						</div>
-
-						<div class="row">
-
-							{% for directorios in collections.directorios | reverse | limit(6) %}
-                            <div class="col-xl-6 col-sm-12" >
-                                <div class="event-bg event-bg-03 pos-rel mb-30" style="margin:1rem 0rem;;background-color:#e8f0f9!important">
-									<div class="row" style=" align-items:center">
-										<div class="col-xl-6 col-lg-6">
-											<div class="event-img mb-20 center">
-												<img style="height:150px; width:auto" src="{{directorios.data.icono}}" alt="">
-											</div>
-										</div>
-										<div class="col-xl-6 col-lg-6">
-											<div class="event-wrapper mb-20 " style="padding-left:0" >
-												<div class="event-text">
-													
-													<h3> {{directorios.data.institucionp}}</h3>
-												</div>
-												<div class="event-meta">
-													<span>{{directorios.data.nombresr}} | {{directorios.data.cargor}} | {{directorios.data.contactor}}</span>
-												</div><br>
-											</div>
-										</div>
-									</div>
-								</div>
-                            </div>
-				
-							{% endfor %}
-				
-						</div>
-
-						
-						
-
-					</div>	
-				</div-->
-
-            </div>
         </section>
 
 {% endblock %}

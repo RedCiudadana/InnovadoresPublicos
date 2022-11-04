@@ -13,11 +13,10 @@ permalink: "mesas/index.html"
 
         <!-- Slider
 		============================================= -->
-		<section id="slider" class="slider-element bg-color" >
+		<section id="slider" class="slider-element bg-color" style="background-color: #e8f0f9;margin-bottom:0!important">
 			<div class="container">
-				<div class="row h-100">
+				<div class="row h-100 py-6">
 					<div class="col-lg-12 d-flex align-self-center flex-column justify-content-center pt-5 pb-0 py-lg-6 mb-0 my-lg-4">
-						<img src="/elementos/ELEMENTOS_RIP/ICONOS/ICONO-16.png"  style="z-index: 3; width:150px; align-self:center">
 						<h1 style="weight:500" class="text-white text-center">Grupos de Trabajo</h1>
 					</div>
 				</div>
@@ -38,92 +37,40 @@ permalink: "mesas/index.html"
 			<div class="content-wrap" style="padding:0">
 
        
-        <!-- Mesas
-		============================================= -->
+				<!-- Mesas
+				============================================= -->
 
-				<div class="container my-6">
-					<div class="row text-center mb-5" style="justify-content:space-evenly;align-items:flex-start">
-						<!--div class="col-lg-6">
-							<h3 class="display-4 fw-bolder mb-3">Publicaciones</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum est voluptatem accusamus molestiae eaque perspiciatis mollitia.</p>
-						</div-->
+				<div class="section py-6 m-0">
+					<div class="container">
+						<div class="row col-mb-30">
+							<div class="container">
+								<h2 style="text-align:left;margin:1rem 0">Mesas de Trabajo</h2>
 
-						<div class="row posts-md col-mb-30 ">
-
-                            {% for mesa in collections.mesas%}
-                            <div class=" pos-rel  col-lg-6 col-xl-6" style="margin:1rem 0;">
-								<div class="row  event-bg event-bg-03" style=" align-items:center;background-color:#e8f0f9!important;margin:0 1rem!important;height:100%;padding:5%!important">
-									<div class="col-xl-4 col-lg-4">
-										<div class="event-img mb-20 center">
-											<img style="height:150px;width:auto" src="{{mesa.data.icono}}" alt="">
-										</div>
-									</div>
-									<div class="col-xl-8 col-lg-8" style="text-align:left">
-										<div class="event-wrapper mb-20 " >
-											<div class="event-text">
-												<!--span><i class="far fa-map-marked-alt verdeo"></i> Guatemala - 8 de Septiembre 2021</span-->
-												<h3> {{mesa.data.title}}</h3>
+								<div class="row">
+									{% if collections.mesas %}
+									{% for mesa in collections.mesas | limit(4)%}
+									<div class="col-lg-6 col-sm-12">
+										<div class="cuadro-actividad">
+											<div class="imagen-actividad">
+												<img src="{{mesa.data.icono}}">
 											</div>
-											<div class="event-meta">
-												<span><!--i class="far fa-user-circle"></i-->{{mesa.data.subtitle}}</span>
-											</div><br>
-											<div class="event-meta">
-												<div class="cta-button">
-													<a class="btn" href="{{mesa.url}}">Ver más <i class="fa fa-long-arrow-right"></i></a>
-												</div>
+											<div class="contenido-actividad">		
+												<h3>{{mesa.data.title}}</h3>
+												<p>{{mesa.data.description}}</p>
+												<a class="btn" href="{{mesa.url}}">Ver más <i class="fa fa-long-arrow-right"></i></a>
 											</div>
 										</div>
 									</div>
+									{% endfor %}
+									{% endif %}
 								</div>
+					
 							</div>
-							{% endfor %}
-							
-				
 						</div>
-
-						
-
 					</div>	
 				</div>
+
 			</div>
-
-		 <!-- Podcast
-		============================================= -->
-
-				<!--div class="section py-6 my-6" style="background-color: #e8f0f9;margin-bottom:0!important">
-					{% if collections.podcastsHighlighted %}
-					{% for podcast in collections.podcastsHighlighted | limit(1)%}
-					<div class="container">
-						<div class="row align-items-center col-mb-50">
-
-							<div class="col-md-12 text-center">
-								<div class="row posts-md col-mb-30" style="align-items:center">
-
-									<div class="entry col-sm-6 col-xl-6">
-										<div class="grid-inner">
-											<span>Podcast</span>
-											<h3>{{podcast.data.title}}</h3>
-											<p>{{podcast.data.descripcion}}</p>
-											<div class="cta-button">
-												<a class="btn" href="{{podcast.url}}">Suscribirse <i class="fa fa-long-arrow-right"></i></a>
-											</div>
-										</div>
-									</div>
-									<div class="entry col-sm-6 col-xl-6">
-										<div class="grid-inner">
-											<iframe src="{{podcast.data.link}}" width="100%"
-                							height="232" frameBorder="0" allowfullscreen=""
-               								 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-										</div>
-									</div>
-									
-								</div>
-							</div>
-						</div>
-					</div>
-					{% endfor %}
-					{% endif %}
-				</div-->
 
 
         </section>

@@ -13,11 +13,10 @@ permalink: "actividades/index.html"
 
         <!-- Slider
 		============================================= -->
-		<section id="slider" class="slider-element bg-color" >
+		<section id="slider" class="slider-element bg-color" style="background-image:url('/images/red/SLIDER/INOVADORES_P-20.png');background-size:cover">
 			<div class="container">
-				<div class="row h-100">
+				<div class="row h-100 py-6">
 					<div class="col-lg-12 d-flex align-self-center flex-column justify-content-center pt-5 pb-0 py-lg-6 mb-0 my-lg-4">
-						<img src="/elementos/ELEMENTOS_RIP/ICONOS/ICONO-15.png"  style="z-index: 3; width:150px; align-self:center">
 						<h1 style="weight:500" class="text-white text-center">Actividades</h1>
 					</div>
 				</div>
@@ -35,82 +34,48 @@ permalink: "actividades/index.html"
         <!-- Content
 		============================================= -->
 		<section id="content">
-			<div class="content-wrap" style="padding:0">
+			<div class="content-wrap p-0" style="padding:0">
 
-     
+        		<!-- Actividades y Podcasts
+				============================================= -->
+				<div class="section py-6 m-0" style="background-color: #e6eff6">
+					<div class="container">
+						<div class="row col-mb-30">
+							<div class="container">
+								<h2 style="text-align:left;margin:1rem 0">Actividades</h2>
 
-        <!-- Actividades y Podcasts
-		============================================= -->
-
-				<div class="container my-6">
-					<div class="row text-center mb-5" style="justify-content:space-between;align-items:flex-start">
-						<!--div class="col-lg-6">
-							<h3 class="display-4 fw-bolder mb-3">Publicaciones</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum est voluptatem accusamus molestiae eaque perspiciatis mollitia.</p>
-						</div-->
-
-						<div class="row posts-md col-mb-30 col-xl-8">
-
-
-							<h2 style="text-align:left;margin:1rem 0">Actividades</h2>
-
-							{% for actividad in collections.actividades | reverse | limit(5) %}
-					
-				
-							<a href="{{actividad.url}}"><div class="event-bg event-bg-03 pos-rel mb-30" style="margin:1rem 0;border-top:2px solid #ccc;background-color:#fff!important">
-								<div class="row" style=" align-items:center">
-									<div class="col-xl-6 col-lg-6">
-										<div class="event-img mb-20 center" style="background-color:#e8f0f9;margin:2rem;padding:1rem">
-											<img style="height:100%!important" src="{{actividad.data.image}}" alt="">
-										</div>
-									</div>
-									<div class="col-xl-6 col-lg-6">
-										<div class="event-wrapper mb-20 " >
-											<div class="event-text">
-												<!--span><i class="far fa-map-marked-alt verdeo"></i> Guatemala - 8 de Septiembre 2021</span-->
-												<h3> {{actividad.data.title}}</h3>
+								<div class="row">
+									{% for actividad in collections.actividades | reverse | limit(5) %}
+									<div class="col-lg-6 col-sm-12">
+										<a href="{{actividad.url}}">
+											<div class="cuadro-actividad2">
+												<div class="imagen-actividad">
+													<img src="{{actividad.data.image}}">
+												</div>
+												<div class="contenido-actividad">
+													<span><img src="/images/red/ICONOS/INOVADORES_P-14.png">{{actividad.data.date | dateFormat('DD/MM/YYYY')}}</span>
+													<h3>{{actividad.data.title}}</h3>
+													<p>{{actividad.data.autor}}<p>
+												</div>
 											</div>
-											<div class="event-meta">
-												<span><!--i class="far fa-user-circle"></i-->{{actividad.data.autor}} | {{actividad.data.date | dateFormat('DD/MM/YYYY')}}</span>
-											</div><br>
+										</a>
+									</div>
+									{% endfor %}
+								</div>
+
+								<div style="display:flex; justify-content:flex-end">
+									<div class="row">
+										<div class="cta-button">
+											<a class="btn" href="/actividades/index.html"> Más actividades <i class="fa fa-long-arrow-right"></i></a>
 										</div>
 									</div>
-								</div>
-							</div></a>
-
-							{% endfor %}
-
-							<div class="mb-6" style="display:flex; justify-content:flex-end">
-								<div class="cta-button">
-									<a class="btn" href="/actividades/index.html"> Más actividades <i class="fa fa-long-arrow-right"></i></a>
-								</div>
+								</div>	
+					
 							</div>
-				
 						</div>
-
-						<div class="row posts-md col-mb-30 col-xl-4">
-							<h3 style="text-align:left;margin:1rem 0">Podcasts</h3>
-
-							{% for podcast in collections.podcasts | reverse | limit(4)%}
-							<div class="entry ">
-								<div class="grid-inner">
-									<iframe height="155px" src="{{podcast.data.link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-									<p class="txt-video">{{podcast.data.description}}</p>
-								</div>
-								
-							</div>
-							{% endfor %}
-
-							<div class="mb-6" style="display:flex; justify-content:flex-end">
-								<div class="cta-button">
-									<a class="btn" href="/podcasts/index.html"> Más podcasts <i class="fa fa-long-arrow-right"></i></a>
-								</div>
-							</div>	
-						</div>	
-						
-
 					</div>	
 				</div>
+				
 			</div>
 
 
