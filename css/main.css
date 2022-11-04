@@ -3705,7 +3705,7 @@ label {
   -o-transition: 0.3s;
   transition: 0.3s;
   vertical-align: middle;
-  background: #02ac8b;
+  background: #268dbe;
   border-radius: 5px;
   border: none;
 }
@@ -7027,10 +7027,6 @@ button.b-btn.btn-black {
   background: #19a280 !important;
 }
 
-.cta-button:hover {
-  background: #dd4c35 !important;
-  border-radius: 5px;
-}
 
 #scrollUp {
   background: #dd4c35 !important;
