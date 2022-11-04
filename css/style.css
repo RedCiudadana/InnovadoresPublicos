@@ -18723,4 +18723,18 @@ footer .mobile-social-icon h6 {
   .cuadro_blog{
     display: block;
   }
+
+  .redes{
+    display: none;
+  }
+}
+
+.redes{
+  color: #a1aeb8!important;
+  transition: 0.5s;
+  padding: 5px;
+}
+
+.redes:hover{
+  color: #09334E!important;
 }
