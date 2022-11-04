@@ -2,7 +2,7 @@
 autor: Julio Herrera
 descripcion: Hoy es el lanzamiento de la plataforma
 title: Lanzamiento de plataforma
-image: /images/posts/icono-10.png
+image: /images/posts/inovadores_p-10.png
 subtitulo: Conoce las actividades e insumos recabados durante la actividad del
   lanzamiento de plataforma de la Red de Innovadores Públicos
 correo: innovadores@redciudadana.org.gt
