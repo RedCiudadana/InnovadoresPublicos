@@ -1,6 +1,6 @@
 ---
 title: 6ta Mesa de Innovadores
-image: /images/posts/icono-11.png
+image: /images/posts/inovadores_p-11.png
 subtitulo: 6ta Mesa de Innovadores
 autor: GAE
 correo: info@redciudadana.org.gt
