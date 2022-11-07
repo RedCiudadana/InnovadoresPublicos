@@ -1,6 +1,6 @@
 ---
 title: E-Government Development Index (EGDI) - Guatemala
-image: /images/posts/icono-10.png
+image: /images/posts/inovadores_p-13.png
 description: "The E-Government Development Index presents the state of
   E-Government Development of the United Nations Member States. Along with an
   assessment of the website development patterns in a country, the E-Government

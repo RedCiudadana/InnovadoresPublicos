@@ -1,7 +1,7 @@
 ---
 title: "Latin American Economic Outlook 2020: Digital Transformation for
   Building Back Better (Guatemala)"
-image: /images/posts/icono-12.png
+image: /images/posts/inovadores_p-13.png
 description: "Guatemala continues to progress in enhancing digital access and
   use for all. The share of Internet users increased from 8.3% in 2008 to 65.0%
   in 2018, which is above the current Latin America and the Caribbean (LAC)

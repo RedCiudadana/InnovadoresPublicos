@@ -1,7 +1,7 @@
 ---
 title: "Digital Economy and Technology in The Service of The Region's
   Development: Economic Report on Central America and the Dominican Republic"
-image: /images/posts/icono-12.png
+image: /images/posts/inovadores_p-13.png
 description: "La tecnología para mejorar la eficiencia del gasto y provisión de
   servicios públicos "
 autor: BID (IADB)

@@ -1,6 +1,6 @@
 ---
 title: 1er Estudio de Comercio Electrónico - Guatemala
-image: /images/posts/icono-10.png
+image: /images/posts/inovadores_p-13.png
 description: Estudio para identificar las compras en línea y preferencias en
   internet junto con los productos identificados.
 autor: Camara de Comercio de Guatemala

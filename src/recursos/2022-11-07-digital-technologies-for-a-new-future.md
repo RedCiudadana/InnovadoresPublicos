@@ -1,6 +1,6 @@
 ---
 title: Digital technologies for a new future
-image: /images/posts/icono-10.png
+image: /images/posts/inovadores_p-13.png
 description: In respect of digitalization, 15 years on from the approval of the
   first Digital Agenda for Latin America and the Caribbean, the region is facing
   a new world and a challenging context. Some of the expectations of that time
