@@ -5,5 +5,6 @@ subtitle: En este Grupo hablaremos sobre Gobierno Abierto
 descripcion: En esta mesa podrás conversar, generar debates y publicar insumos
   sobre los mayores avances y retos en materia de Gobierno Abierto en Guatemala,
   buenas prácticas a nivel internacional, conocer más sobre el proceso y más.
+disqus: https://https-innovadores-redciudadana-org.disqus.com/embed.js
 highlight: false
 ---
