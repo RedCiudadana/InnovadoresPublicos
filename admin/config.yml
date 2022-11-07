@@ -119,6 +119,7 @@ collections:
       - { label: "Icono", name: "icono", widget: "image" }
       - { name: "subtitle", label: "Subtítulo" }
       - { name: "descripcion", label: "Descripción", widget: "markdown" }
+      - { name: "disqus", label: "Disqus" }
       - {
           name: "highlight",
           label: "Highlight",

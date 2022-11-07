@@ -57,19 +57,8 @@
             <div class="col-span-6 md:col-span-6 ">
               {{ descripcion | safe}}
             </div>
-            <div class="col-span-6 md:col-span-6 presponsive" style="padding-left: 3rem;">
-              <h6>Escucha nuestros podcasts</h6>
-              <div class="row">
-                {% if collections.podcasts %}
-                  {% for podcast in collections.podcasts | reverse | limit(4) %}
-                    <div class="col-xl-6 col-lg-6 col-sm-12 mb-4">
-                      <iframe src="{{ podcast.data.link }}" width="100%"
-                        height="152" frameBorder="0" allowfullscreen="" class="rifra"
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                    </div>
-                  {% endfor %}
-                {% endif %}
-              </div>
+            <div class="col-span-6 md:col-span-6 presponsive my-6" style="padding-left: 3rem;">
+              <div id="disqus_thread"></div>
             </div>  
           </div>
 
@@ -100,7 +89,7 @@
                     </div><br>
                     <div class="event-meta">
                       <div class="cta-button">
-                        <a class="btn" href="{{mesa.url}}">Ver más <i class="far fa-long-arrow-right"></i></a>
+                        <a class="btn" href="{{mesa.url}}">Ver más <i class="fa fa-long-arrow-right"></i></a>
                       </div>
                     </div>
                   </div>
@@ -114,5 +103,28 @@
     </div>
   </div>
 </div>
+
+{% endblock %}
+
+{% block body_javascripts%}
+
+  <script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-innovadores-redciudadana-org.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 {% endblock %}

@@ -40,31 +40,30 @@ permalink: "recursos/index.html"
 					<div class="container">
 						<div class="row col-mb-30">
 							<div class="container">
-								<h2 style="text-align:left;margin:1rem 0">Recursos</h2>
 
-								<div class="row">
+								<div class="row justify-content-center">
                     
 
 									{% for recurso in collections.recursos %}
 									<!-- Recurso -->
-									<div class="col-md-8 col-lg-8 col-sm-12">
-										<div class="cuadro_blog ">
+									<div class="col-md-6 col-lg-6 col-sm-12" >
+										<div class="cuadro_blog " >
 											<div class="imagen-blog col-lg-4 col-sm-12">
-												<a href="{{recurso.data.enlace}}"><img src="{{ recurso.data.image }}" alt="Evento" class="w-36"></a>
+												<a target="_blank" href="{{recurso.data.enlace}}"><img src="{{ recurso.data.image }}" alt="Evento" class="w-36"></a>
 											</div>
 											
 											<div class="contenido-c-blog px-4 py-4 text-left col-lg-8 col-sm-12">
 												<h3 class="font-bold text-lg">
 												{{recurso.data.title }}
 												</h3>
-												<span class="text-sm">Publicado el 
-												{{recurso.data.date | dateFormat('DD/MM/YYYY')}}
+												<span class="text-sm">Publicado por 
+												{{recurso.data.autor}}
 												</span>
 												<p class="text-sm">
 												{{recurso.data.description}}
 												</p>
 
-												<a target="_blank" class="btn" href="{{recurso.data.enlace}}">Descargar</a>
+												<a target="_blank" class="btn" href="{{recurso.data.enlace}}">Más Información</a>
 												
 											</div>
 											
