@@ -14,6 +14,8 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('images');
     eleventyConfig.addPassthroughCopy('admin');
 
+    eleventyConfig.addPassthroughCopy({ 'netlify': '/' });
+
     eleventyConfig.addCollection('podcastsHighlighted', (collectionApi) => {
         return collectionApi.getFilteredByTag('podcasts').filter((item) => {
             return item.data.highlight == true;
