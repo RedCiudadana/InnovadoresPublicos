@@ -1,6 +1,6 @@
 ---
 title: Coalición Guatemalteca Para Una Internet Asequible (A4AI-Guatemala)
-image: /images/posts/icono-10.png
+image: /images/posts/inovadores_p-13.png
 description: "Este MOU sienta las bases para construir una fuerte y diversa
   coalición de actores locales del sector público, privado y de la sociedad
   civil, para identificar los impedimentos claves en políticas públicas y
