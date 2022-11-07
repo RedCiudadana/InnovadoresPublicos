@@ -1,6 +1,6 @@
 ---
 title: ICANN Formalizes Relationship with ccTLD Manager for Guatemala
-image: /images/posts/icono-11.png
+image: /images/posts/inovadores_p-10.png
 description: "ICANN has announced today that it has signed an accountability
   framework with the country code top level domain (ccTLD) manager for
   .gt--Guatemala, Universidad del Valle de Guatemala.  The Accountability
