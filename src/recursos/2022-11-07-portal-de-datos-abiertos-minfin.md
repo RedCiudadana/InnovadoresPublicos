@@ -1,6 +1,6 @@
 ---
 title: Portal de Datos Abiertos MINFIN
-image: /images/posts/icono-10.png
+image: /images/posts/inovadores_p-13.png
 description: Plataforma de datos abiertos del Ministerio de Finanzas Públicas
 autor: Ministerio de Finanzas Públicas
 correo: "info@redciudadana@gmail.com "
