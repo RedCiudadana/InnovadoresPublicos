@@ -1,6 +1,6 @@
 ---
 title: Guatemala accede al Convenio sobre Ciberdelincuencia de Budapest
-image: /images/posts/icono-11.png
+image: /images/posts/inovadores_p-10.png
 description: En el caso de Guatemala, se solicitó adherirse a este convenio en
   el año 2016 y para ello, según las fuentes consultadas, se han presentado en
   el Congreso de la República las siguientes iniciativas de ley, la primera en
