@@ -7,7 +7,7 @@ description: "ICANN has announced today that it has signed an accountability
   Framework program provides two mechanisms by which ccTLD managers can
   formalise their relationship with ICANN. "
 autor: ICANN
-correo: info@redciudadana@gmail.com
+correo: info@redciudadana.org.gt
 date: 2022-11-07T15:44:27.962Z
 enlace: https://www.icann.org/ru/announcements/details/icann-formalizes-relationship-with-cctld-manager-for-guatemala-7-9-2006-en
 highlight: false
