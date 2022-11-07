@@ -1,6 +1,6 @@
 ---
 title: Global Cybersecurity Index
-image: /images/posts/icono-02.png
+image: /images/posts/inovadores_p-11.png
 description: The Global Cybersecurity Index (GCI) is a trusted reference that
   measures the commitment of countries to cybersecurity at a global level – to
   raise awareness of the importance and different dimensions of the issue. As
