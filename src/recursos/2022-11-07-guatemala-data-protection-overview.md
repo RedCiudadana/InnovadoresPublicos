@@ -1,6 +1,6 @@
 ---
 title: Guatemala - Data Protection Overview
-image: /images/posts/icono-12.png
+image: /images/posts/inovadores_p-11.png
 description: Guatemala does not have a specific regime dealing with the
   protection of personal data. However, there is legislation that may result
   applicable when processing personal data. In this sense, the Law on Access to
