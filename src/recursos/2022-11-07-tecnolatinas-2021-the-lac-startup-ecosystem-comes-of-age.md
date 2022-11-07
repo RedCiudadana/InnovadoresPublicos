@@ -1,6 +1,6 @@
 ---
 title: Tecnolatinas 2021 The LAC Startup Ecosystem Comes of Age
-image: /images/posts/icono-11.png
+image: /images/posts/inovadores_p-10.png
 description: A startup revolution is unfolding in Latin America and the
   Caribbean  (LAC).  Latin  entrepreneurs  are  demonstrating
   world-class  vision,  business  skills,  and  grit.  They  are
