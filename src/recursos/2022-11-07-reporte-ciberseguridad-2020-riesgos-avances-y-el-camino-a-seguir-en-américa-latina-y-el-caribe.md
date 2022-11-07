@@ -1,7 +1,7 @@
 ---
 title: "Reporte Ciberseguridad 2020: riesgos, avances y el camino a seguir en
   América Latina y el Caribe"
-image: /images/posts/icono-12.png
+image: /images/posts/inovadores_p-10.png
 description: Este reporte brinda un panorama detallado y actualizado de las
   políticas y prácticas de ciberseguridad en los países de América Latina y el
   Caribe, ofreciendo una perspectiva sobre el progreso alcanzado desde su
