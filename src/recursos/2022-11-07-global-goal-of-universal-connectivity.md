@@ -1,6 +1,6 @@
 ---
 title: Global Goal of Universal Connectivity
-image: /images/posts/icono-10.png
+image: /images/posts/inovadores_p-13.png
 description: Comisión para aumentar la priorización de banda ancha en las
   políticas públicas de los gobierno en Latinoamérica y en el mundo
 autor: Broadband Commission
