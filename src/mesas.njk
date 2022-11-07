@@ -80,11 +80,12 @@ permalink: "innovadores/index.html"
 										<a target="_blank" href="{{recurso.data.enlace}}">
 											<div class="cuadro-actividad">
 												<div class="imagen-actividad">
-													<img style="padding:0!important" src="{{recurso.data.image}}">
+													<img style="width:200px;height:80px" style="padding:0!important" src="{{recurso.data.image}}">
 												</div>
 												<div class="contenido-actividad">
 													<span><img src="/images/red/ICONOS/INOVADORES_P-14.png">{{recurso.data.date | dateFormat('DD/MM/YYYY')}}</span>
-													<h3>{{recurso.data.title}}</h3>
+													<h3 class="overflow-title cuadro-title">{{recurso.data.title}}</h3>
+													<div class="tooltip">{{recurso.data.title}}</div>
 													<p>{{recurso.data.autor}}<p>
 												</div>
 											</div>
