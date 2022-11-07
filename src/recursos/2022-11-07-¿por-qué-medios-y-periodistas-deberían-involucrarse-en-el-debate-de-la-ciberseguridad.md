@@ -1,7 +1,7 @@
 ---
 title: ¿Por qué medios y periodistas deberían involucrarse en el debate de la
   ciberseguridad?
-image: /images/posts/icono-12.png
+image: /images/posts/inovadores_p-13.png
 description: Diversos tipos de ataques a los medios de comunicación en internet
   fueron registrados en los países de América Latina durante 2015. Inversión en
   seguridad digital y un activo rol por parte de medios y periodistas en las
