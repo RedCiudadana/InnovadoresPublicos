@@ -1,7 +1,7 @@
 ---
 title: 2do Estudio Nacional de Comercio Electrónico. Guatemala 2019-2020 (Pre y
   durante COVID-19)
-image: /images/posts/icono-10.png
+image: /images/posts/inovadores_p-13.png
 description: "Estudio para conocer los hábitos del consumidor guatemalteco en el
   canal de venta online para profundizar en la  penetración del comercio
   móvil.  "
