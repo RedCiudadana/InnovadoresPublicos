@@ -89,7 +89,7 @@
                     </div><br>
                     <div class="event-meta">
                       <div class="cta-button">
-                        <a class="btn" href="{{mesa.url}}">Ver más <i class="fa fa-long-arrow-right"></i></a>
+                        <a class="btn" href="{{mesa.url}}">Ver más<i class="fa fa-long-arrow-right"></i></a>
                       </div>
                     </div>
                   </div>
@@ -103,6 +103,7 @@
     </div>
   </div>
 </div>
+
 
 {% endblock %}
 
@@ -120,7 +121,7 @@
     */
     (function() { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
-    s.src = {{mesa.disqus}};
+    s.src = '{{disqus}}';
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
     })();
