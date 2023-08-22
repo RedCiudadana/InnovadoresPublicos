@@ -127,6 +127,29 @@ collections:
           default: false,
           hint: "Display posts in home's highlights",
         }
+  - name: "gobiernodigital" # Used in routes, e.g., /admin/collections/blog
+    label: "Gobierno Digital" # Used in the UI
+    folder: "src/gobiernodigital" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    editor:
+      preview: false # Disable the editor preview and use instead 'preview links'
+    fields: # The fields for each document, usually in front matter
+      - { name: "title", label: "Título" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { name: "description", label: "Descripción" }
+      - { name: "autor", label: "Autor" }
+      - { name: "correo", label: "Correo" }
+      - { name: "date", label: "Fecha", widget: "datetime" }
+      - { name: "body", label: "Contenido", widget: "markdown" }
+      - { name: "enlace", label: "Enlace de Recurso" }
+      - {
+          name: "highlight",
+          label: "Highlight",
+          widget: "boolean",
+          default: false,
+          hint: "Display posts in home's highlights",
+        }
   - name: "podcast" # Used in routes, e.g., /admin/collections/podcast
     label: "Podcast" # Used in the UI
     folder: "src/podcasts" # The path to the folder where the documents are stored

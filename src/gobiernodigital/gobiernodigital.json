@@ -1,0 +1,5 @@
+{
+    "tags": "gobiernodigital",
+    "permalink": "gobiernodigital/{{ page.fileSlug }}/index.html",
+    "layout": "layouts/gobiernodigital.njk"
+}

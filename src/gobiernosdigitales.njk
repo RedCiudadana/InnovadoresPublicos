@@ -1,0 +1,86 @@
+---
+permalink: "gobiernodigital/index.html"
+---
+
+{% extends "base.njk" %}
+
+{% block head %}
+<title>Innovadores Publicos | Gobierno Digital</title>
+<link rel="stylesheet" href="/css/main.css" type="text/css" />
+{% endblock %}
+
+{% block content %}
+
+        <!-- Slider
+		============================================= -->
+		<section id="slider" class="slider-element bg-color" style="background-image:url('/images/red/SLIDER/INOVADORES_P-22.png');background-size:cover">
+			<div class="container">
+				<div class="row h-100 py-6">
+					<div class="col-lg-12 d-flex align-self-center flex-column justify-content-center pt-5 pb-0 py-lg-6 mb-0 my-lg-4">
+						<h1 style="weight:500" class="text-white text-center">Gobierno Digital</h1>
+					</div>
+				</div>
+			</div>
+			<!--div class="bg-alt py-5">
+				<div class="container">
+					<div class="d-flex">
+						<h4 class="mb-0"><span class="counter counter-inherit fw-normal text-white"><i class="icon-line-users icon-fw"></i> <span class="color fw-semibold" data-from="100" data-to="12462" data-refresh-interval="150" data-speed="2000"></span> Members Registered.</span></h4>
+						<h4 class="mb-0 ms-5"><span class="counter counter-inherit fw-normal text-white"><i class="icon-line-message-circle icon-fw"></i> <span class="color fw-semibold" data-from="100" data-to="340333" data-refresh-interval="100" data-speed="2000"></span> Posts Created.</span></h4>
+					</div>
+				</div>
+			</div-->
+		</section>
+
+        <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap" style="padding:0">
+
+                <div class="section py-6 m-0" style="background-color: #e6eff6">
+					<div class="container">
+						<div class="row col-mb-30">
+							<div class="container">
+
+								<div class="row justify-content-center">
+                    
+
+									{% for gobdig in collections.gobiernodigital %}
+									<!-- Recurso -->
+									<div class="col-md-6 col-lg-6 col-sm-12" >
+										<div class="cuadro_blog " >
+											<div class="imagen-blog col-lg-4 col-sm-12">
+												<a target="_blank" href="{{gobdig.data.enlace}}"><img src="{{ gobdig.data.image }}" alt="Evento" class="w-36"></a>
+											</div>
+											
+											<div class="contenido-c-blog px-4 py-4 text-left col-lg-8 col-sm-12">
+												<h3 class="font-bold text-lg overflow-title cuadro-title">
+												{{gobdig.data.title }}
+												</h3>
+												<div class="tooltip">{{gobdig.data.title}}</div>
+												<span class="text-sm">Publicado por 
+												{{gobdig.data.autor}}
+												</span>
+												<p class="text-sm overflow-text">
+												{{gobdig.data.description}}
+												</p>
+
+												<a target="_blank" class="btn" href="{{gobdig.data.enlace}}">Más Información</a>
+												
+											</div>
+											
+
+										</div>
+									</div>
+
+									{% endfor %}
+								</div>
+
+							</div>
+						</div>
+					</div>
+                </div>
+
+            </div>
+        </section>
+
+{% endblock %}
