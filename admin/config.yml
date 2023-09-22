@@ -20,6 +20,7 @@ collections:
       - { name: "date", label: "Fecha", widget: "datetime" }
       - { name: "descripcion", label: "Descripción", widget: "markdown" }
       - { name: "acuerdos", label: "Acuerdos", widget: "markdown" }
+      - { name: "video", label: "Video", optional: true }
       - {
           name: "minuta",
           label: "Minuta",
