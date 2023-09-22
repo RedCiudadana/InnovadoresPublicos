@@ -20,7 +20,7 @@ collections:
       - { name: "date", label: "Fecha", widget: "datetime" }
       - { name: "descripcion", label: "Descripción", widget: "markdown" }
       - { name: "acuerdos", label: "Acuerdos", widget: "markdown" }
-      - { name: "video", label: "Video", optional: true }
+      - { name: "video", label: "Video", required: false }
       - {
           name: "minuta",
           label: "Minuta",
@@ -32,7 +32,7 @@ collections:
           label: "Documentos Adicionales",
           widget: "file",
           media_folder: "/images/files",
-          optional: true,
+          required: false,
         }
       - {
           name: "highlight",
