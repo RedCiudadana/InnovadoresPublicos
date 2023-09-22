@@ -97,7 +97,7 @@ permalink: "index.html"
 								<h2 style="text-align:left;margin:1rem 0">Actividades</h2>
 
 								<div class="row">
-									{% for actividad in collections.actividades | reverse | limit(5) %}
+									{% for actividad in collections.actividades | reverse | limit(2) %}
 									<div class="col-lg-6 col-sm-12">
 										<a href="{{actividad.url}}">
 											<div class="cuadro-actividad">
