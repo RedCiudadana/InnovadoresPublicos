@@ -27,6 +27,7 @@ descripcion: >-
 
   Esta mesa de diálogo permitió a las instituciones reflexionar sobre su papel como servidores públicos, la situación actual en el país en cuanto a las temáticas, los avances y desafíos y lo más importante, generaron propuestas de potencial solución a algunas de las problemáticas.
 acuerdos: N﻿o hubieron acuerdos
+video: ""
 minuta: /images/files/agenda-mesa-de-innovadores-públicos-26-de-abril-2022-1-.pdf
 documentosads: /images/files/presentación-1-er.-mesa-de-innovadores-antigua-up-gae-eemg.pdf
 highlight: false
